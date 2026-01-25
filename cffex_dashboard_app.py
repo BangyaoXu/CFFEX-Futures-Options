@@ -1,17 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-CFFEX Futures & Options Volatility Dashboard (Streamlit)
+CFFEX Futures & Options Dashboard (Streamlit)
 ============================================================================
-
-This version removes Streamlit uploaders and instead reads *.html/*.htm/*.mhtml
-directly from the SAME FOLDER as this script (or any folder you choose).
-
-Included fixes:
-1) ✅ Robust table extraction: prefer pandas.read_html (colspan/rowspan-safe), fallback to BeautifulSoup.
-2) ✅ Options multi-expiry within ONE table:
-   - Detect marker rows like: 看涨  HO2602  看跌
-   - Apply current expiry to numeric rows until next marker row.
-3) ✅ Skew RR25/BF25 robust (Fix #2): nearest-delta within tolerance (no strict interpolation).
 
 Install:
   pip install streamlit pandas numpy scipy plotly beautifulsoup4 lxml
@@ -617,8 +607,8 @@ def split_fut_opt(files: List[Path]) -> Tuple[List[Path], List[Path]]:
 # =========================
 # Streamlit UI
 # =========================
-st.set_page_config(page_title="CFFEX Vol Dashboard", layout="wide")
-st.title("CFFEX Futures & Options — Volatility Trading Dashboard")
+st.set_page_config(page_title="CFFEX Dashboard", layout="wide")
+st.title("CFFEX Futures & Options Dashboard")
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
