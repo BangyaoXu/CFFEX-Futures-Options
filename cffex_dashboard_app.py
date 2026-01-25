@@ -638,10 +638,11 @@ if not all_files:
 fut_paths, opt_paths = split_fut_opt(all_files)
 
 st.caption(f"Reading files from: {data_dir}")
-with st.expander("Detected files"):
-    st.write("All files:", [p.name for p in all_files])
-    st.write("Futures candidates:", [p.name for p in fut_paths])
-    st.write("Options candidates:", [p.name for p in opt_paths])
+if show_debug:
+    with st.expander("Detected files"):
+        st.write("All files:", [p.name for p in all_files])
+        st.write("Futures candidates:", [p.name for p in fut_paths])
+        st.write("Options candidates:", [p.name for p in opt_paths])
 
 if not fut_paths or not opt_paths:
     st.error("Need BOTH futures and options files in the folder (or your sniff rules didn't match).")
