@@ -46,6 +46,9 @@ OPTIONS_NAME_MAP = {
 FUT_PREFIXES = list(FUTURES_NAME_MAP.keys())
 OPT_PREFIXES = list(OPTIONS_NAME_MAP.keys())
 
+# Options product -> matching futures product (for curve info)
+OPT_TO_FUT = {"IO": "IF", "HO": "IH", "MO": "IM"}
+
 
 # =========================
 # Utilities
@@ -193,7 +196,9 @@ def extract_tables_from_mhtml_or_html(path: Path) -> List[pd.DataFrame]:
                 def _row_keep(sr: pd.Series) -> bool:
                     vals = ["" if pd.isna(x) else str(x).strip() for x in sr.values]
                     has_num = any(_num(x) is not None for x in vals)
-                    has_key = any(any(k in v for k in ["行权价", "最新价", "合约名称", "看涨", "看跌"]) for v in vals)
+                    has_key = any(
+                        any(k in v for k in ["行权价", "最新价", "合约名称", "看涨", "看跌"]) for v in vals
+                    )
                     return has_num or has_key
 
                 df0 = df0[df0.apply(_row_keep, axis=1)].reset_index(drop=True)
@@ -222,8 +227,15 @@ def extract_tables_from_mhtml_or_html(path: Path) -> List[pd.DataFrame]:
             N = min(4, len(padded))
             scored = []
             for i in range(N):
-                scored.append((max(_score_header_row(padded[i], "options"),
-                                   _score_header_row(padded[i], "futures")), i))
+                scored.append(
+                    (
+                        max(
+                            _score_header_row(padded[i], "options"),
+                            _score_header_row(padded[i], "futures"),
+                        ),
+                        i,
+                    )
+                )
             scored.sort(reverse=True)
             header_idx = scored[0][1]
 
@@ -233,7 +245,9 @@ def extract_tables_from_mhtml_or_html(path: Path) -> List[pd.DataFrame]:
             cleaned = []
             for r in data:
                 has_num = any(_num(x) is not None for x in r)
-                keep_marker = (not has_num) and (any("看涨" in str(x) for x in r) or any("看跌" in str(x) for x in r))
+                keep_marker = (not has_num) and (
+                    any("看涨" in str(x) for x in r) or any("看跌" in str(x) for x in r)
+                )
                 if has_num or keep_marker:
                     cleaned.append(r)
 
@@ -290,6 +304,7 @@ def pick_best_table(tables: List[pd.DataFrame], pattern: str, want: str) -> Opti
 # =========================
 FUT_COLS = ["product", "product_name", "symbol", "expiry", "last", "volume", "oi"]
 
+
 def parse_futures(df: Optional[pd.DataFrame], prefix: str) -> pd.DataFrame:
     if df is None or df.empty:
         return pd.DataFrame(columns=FUT_COLS)
@@ -318,15 +333,17 @@ def parse_futures(df: Optional[pd.DataFrame], prefix: str) -> pd.DataFrame:
         last = _num(r.get(last_col))
         if expiry is None or last is None:
             continue
-        out.append({
-            "product": prefix,
-            "product_name": FUTURES_NAME_MAP[prefix],
-            "symbol": sym,
-            "expiry": expiry,
-            "last": float(last),
-            "volume": _num(r.get(vol_col)) if vol_col else None,
-            "oi": _num(r.get(oi_col)) if oi_col else None,
-        })
+        out.append(
+            {
+                "product": prefix,
+                "product_name": FUTURES_NAME_MAP[prefix],
+                "symbol": sym,
+                "expiry": expiry,
+                "last": float(last),
+                "volume": _num(r.get(vol_col)) if vol_col else None,
+                "oi": _num(r.get(oi_col)) if oi_col else None,
+            }
+        )
 
     if not out:
         return pd.DataFrame(columns=FUT_COLS)
@@ -338,6 +355,7 @@ def parse_futures(df: Optional[pd.DataFrame], prefix: str) -> pd.DataFrame:
 # Options parsing (MULTI-EXPIRY WITHIN ONE TABLE)
 # =========================
 OPT_COLS = ["product", "product_name", "expiry", "cp", "K", "price", "volume", "oi", "symbol"]
+
 
 def _extract_yymm_marker_from_row(values: List[str], prefix: str) -> Optional[str]:
     joined = " ".join(values).upper()
@@ -367,9 +385,9 @@ def parse_options_paired_cn_mode(df: pd.DataFrame, prefix: str) -> pd.DataFrame:
     put_side_cols = cols[strike_idx + 1 :]
 
     call_vol_col = next((c for c in call_side_cols[::-1] if "成交量" in c), None)
-    call_oi_col  = next((c for c in call_side_cols[::-1] if "持仓量" in c), None)
-    put_vol_col  = next((c for c in put_side_cols if "成交量" in c), None)
-    put_oi_col   = next((c for c in put_side_cols if "持仓量" in c), None)
+    call_oi_col = next((c for c in call_side_cols[::-1] if "持仓量" in c), None)
+    put_vol_col = next((c for c in put_side_cols if "成交量" in c), None)
+    put_oi_col = next((c for c in put_side_cols if "持仓量" in c), None)
 
     out = []
     current_yymm: Optional[str] = None
@@ -403,30 +421,34 @@ def parse_options_paired_cn_mode(df: pd.DataFrame, prefix: str) -> pd.DataFrame:
             put_px = None
 
         if call_px is not None and call_px > 0:
-            out.append({
-                "product": prefix,
-                "product_name": OPTIONS_NAME_MAP[prefix],
-                "expiry": current_expiry,
-                "cp": "C",
-                "K": float(K),
-                "price": float(call_px),
-                "volume": _num(row.get(call_vol_col)) if call_vol_col else None,
-                "oi": _num(row.get(call_oi_col)) if call_oi_col else None,
-                "symbol": f"{prefix}{current_yymm}-C-{int(K)}",
-            })
+            out.append(
+                {
+                    "product": prefix,
+                    "product_name": OPTIONS_NAME_MAP[prefix],
+                    "expiry": current_expiry,
+                    "cp": "C",
+                    "K": float(K),
+                    "price": float(call_px),
+                    "volume": _num(row.get(call_vol_col)) if call_vol_col else None,
+                    "oi": _num(row.get(call_oi_col)) if call_oi_col else None,
+                    "symbol": f"{prefix}{current_yymm}-C-{int(K)}",
+                }
+            )
 
         if put_px is not None and put_px > 0:
-            out.append({
-                "product": prefix,
-                "product_name": OPTIONS_NAME_MAP[prefix],
-                "expiry": current_expiry,
-                "cp": "P",
-                "K": float(K),
-                "price": float(put_px),
-                "volume": _num(row.get(put_vol_col)) if put_vol_col else None,
-                "oi": _num(row.get(put_oi_col)) if put_oi_col else None,
-                "symbol": f"{prefix}{current_yymm}-P-{int(K)}",
-            })
+            out.append(
+                {
+                    "product": prefix,
+                    "product_name": OPTIONS_NAME_MAP[prefix],
+                    "expiry": current_expiry,
+                    "cp": "P",
+                    "K": float(K),
+                    "price": float(put_px),
+                    "volume": _num(row.get(put_vol_col)) if put_vol_col else None,
+                    "oi": _num(row.get(put_oi_col)) if put_oi_col else None,
+                    "symbol": f"{prefix}{current_yymm}-P-{int(K)}",
+                }
+            )
 
     if not out:
         return pd.DataFrame(columns=OPT_COLS)
@@ -492,7 +514,7 @@ def delta_forward(F: float, K: float, T: float, vol: float, is_call: bool) -> Op
 
 
 # =========================
-# ✅ Fix 2: Robust RR/BF via nearest delta (no strict interpolation)
+# ✅ Robust RR/BF via nearest delta (no strict interpolation)
 # =========================
 def rr_bf_25d(ivdf: pd.DataFrame, tol: float = 0.08) -> Optional[Dict[str, float]]:
     """
@@ -512,7 +534,7 @@ def rr_bf_25d(ivdf: pd.DataFrame, tol: float = 0.08) -> Optional[Dict[str, float
         return None
 
     calls = d[d["cp"] == "C"].copy()
-    puts  = d[d["cp"] == "P"].copy()
+    puts = d[d["cp"] == "P"].copy()
     if calls.empty or puts.empty:
         return None
 
@@ -541,7 +563,7 @@ def rr_bf_25d(ivdf: pd.DataFrame, tol: float = 0.08) -> Optional[Dict[str, float
 # =========================
 def compute_robust_forward_from_parity(s: pd.DataFrame, T: float, r: float) -> Tuple[Optional[float], pd.DataFrame, str]:
     calls = s[s["cp"] == "C"][["K", "price"]].rename(columns={"price": "C"})
-    puts  = s[s["cp"] == "P"][["K", "price"]].rename(columns={"price": "P"})
+    puts = s[s["cp"] == "P"][["K", "price"]].rename(columns={"price": "P"})
     par = pd.merge(calls, puts, on="K", how="inner").dropna()
     if par.empty:
         return None, par, "No C/P pairs"
@@ -569,6 +591,207 @@ def compute_robust_forward_from_parity(s: pd.DataFrame, T: float, r: float) -> T
     if len(core) < 5:
         note = "Too few parity strikes after filtering."
     return F, par, note
+
+
+# =========================
+# ETF Spot Signal Panel (derivatives -> ETF spot tilt)
+# =========================
+def _as_float(x) -> Optional[float]:
+    try:
+        if x is None:
+            return None
+        v = float(x)
+        if np.isnan(v):
+            return None
+        return v
+    except Exception:
+        return None
+
+
+def _pick_front_expiry(df: pd.DataFrame, col: str = "expiry") -> Optional[dt.date]:
+    if df is None or df.empty:
+        return None
+    xs = sorted(df[col].dropna().unique())
+    return xs[0] if xs else None
+
+
+def _sigmoid_to_0_100(x: float) -> int:
+    y = 1.0 / (1.0 + math.exp(-x))
+    return int(round(100.0 * y))
+
+
+def _surface_horizon_from_points(surf_points: pd.DataFrame) -> str:
+    if surf_points is None or surf_points.empty:
+        return "3–10 trading days"
+
+    hi = surf_points.dropna(subset=["iv", "expiry"]).sort_values("iv", ascending=False).head(30)
+    if hi.empty:
+        return "3–10 trading days"
+
+    e_mode = hi["expiry"].mode()
+    e_star = e_mode.iloc[0] if len(e_mode) else None
+    if e_star is None:
+        return "3–10 trading days"
+
+    expiries_sorted = sorted(surf_points["expiry"].dropna().unique())
+    if not expiries_sorted:
+        return "3–10 trading days"
+
+    front = expiries_sorted[0]
+    if e_star == front:
+        return "1–5 trading days (event / front-expiry dominated)"
+
+    if len(expiries_sorted) >= 2 and e_star == expiries_sorted[1]:
+        return "3–10 trading days"
+
+    return "2–6 weeks (mid/long-expiry dominated)"
+
+
+def etf_spot_signal_panel(
+    *,
+    futures_sub: Optional[pd.DataFrame],
+    atm_term: Optional[pd.DataFrame],
+    skew_term: Optional[pd.DataFrame],
+    surf_points: Optional[pd.DataFrame],
+) -> Dict[str, object]:
+    """
+    Informational ETF spot tilt from derivatives-implied pricing.
+    """
+    score = 0.0
+    drivers: List[str] = []
+    metrics: Dict[str, Optional[float]] = {}
+
+    # ---- Futures curve slope (carry headwind/tailwind proxy)
+    curve_slope = None
+    if futures_sub is not None and not futures_sub.empty and futures_sub.shape[0] >= 2:
+        s = futures_sub.sort_values("expiry")
+        f1 = _as_float(s["last"].iloc[0])
+        fN = _as_float(s["last"].iloc[-1])
+        if f1 and fN and f1 > 0:
+            curve_slope = (fN / f1 - 1.0)  # >0 contango-ish, <0 backwardation-ish
+    metrics["curve_slope"] = curve_slope
+
+    if curve_slope is not None:
+        if curve_slope > 0.002:
+            score -= 0.8
+            drivers.append(f"Futures curve upward (contango-ish): slope ≈ {curve_slope*100:.2f}% (carry headwind for long risk)")
+        elif curve_slope < -0.002:
+            score += 0.8
+            drivers.append(f"Futures curve downward (backwardation-ish): slope ≈ {curve_slope*100:.2f}% (carry tailwind for long risk)")
+        else:
+            drivers.append(f"Futures curve ~flat: slope ≈ {curve_slope*100:.2f}% (carry impact small)")
+    else:
+        drivers.append("Futures curve slope unavailable (insufficient maturities).")
+
+    # ---- Front-expiry RR25/BF25
+    rr25 = bf25 = None
+    if skew_term is not None and not skew_term.empty:
+        front_e = _pick_front_expiry(skew_term, "expiry")
+        if front_e is not None:
+            row = skew_term[skew_term["expiry"] == front_e].iloc[0]
+            rr25 = _as_float(row.get("RR25"))
+            bf25 = _as_float(row.get("BF25"))
+    metrics["RR25"] = rr25
+    metrics["BF25"] = bf25
+
+    rr_th = 0.005  # 0.5 vol point if IV is decimal
+    bf_th = 0.005
+
+    if rr25 is not None:
+        if rr25 <= -rr_th:
+            score -= 1.8
+            drivers.append(f"RR25 negative (puts rich): RR25 ≈ {rr25*100:.2f} vol pts → risk-off skew")
+        elif rr25 >= rr_th:
+            score += 1.8
+            drivers.append(f"RR25 positive (calls rich): RR25 ≈ {rr25*100:.2f} vol pts → risk-on skew")
+        else:
+            drivers.append(f"RR25 near flat: RR25 ≈ {rr25*100:.2f} vol pts")
+    else:
+        drivers.append("RR25 unavailable (insufficient strikes/IV near ±25d).")
+
+    if bf25 is not None:
+        if bf25 >= bf_th:
+            score -= 1.0
+            drivers.append(f"BF25 elevated (wings rich): BF25 ≈ {bf25*100:.2f} vol pts → tail-risk priced")
+        elif bf25 <= -bf_th:
+            score += 0.7
+            drivers.append(f"BF25 cheap (wings cheap): BF25 ≈ {bf25*100:.2f} vol pts → complacency / carry regime")
+        else:
+            drivers.append(f"BF25 moderate: BF25 ≈ {bf25*100:.2f} vol pts")
+    else:
+        drivers.append("BF25 unavailable (insufficient strikes/IV near ±25d).")
+
+    # ---- Front-expiry ATM IV (risk regime)
+    atm_iv = None
+    if atm_term is not None and not atm_term.empty:
+        front_e = _pick_front_expiry(atm_term, "expiry")
+        if front_e is not None:
+            row = atm_term[atm_term["expiry"] == front_e].iloc[0]
+            atm_iv = _as_float(row.get("ATM_IV"))
+    metrics["ATM_IV"] = atm_iv
+
+    if atm_iv is not None:
+        if atm_iv >= 0.25:
+            score -= 0.8
+            drivers.append(f"Front ATM IV high: ~{atm_iv*100:.2f}% → higher expected move / defensive tilt")
+        elif atm_iv <= 0.15:
+            score += 0.5
+            drivers.append(f"Front ATM IV low: ~{atm_iv*100:.2f}% → stable regime / risk-on drift")
+        else:
+            drivers.append(f"Front ATM IV moderate: ~{atm_iv*100:.2f}%")
+    else:
+        drivers.append("ATM IV proxy unavailable.")
+
+    # ---- Horizon via IV surface concentration
+    horizon = _surface_horizon_from_points(surf_points)
+
+    # ---- Bias mapping
+    if score >= 1.5:
+        bias = "LONG ETF spot (risk-on tilt)"
+    elif score <= -1.5:
+        bias = "SHORT / UNDERWEIGHT ETF spot (risk-off tilt)"
+    else:
+        bias = "NEUTRAL / WAIT (no strong edge)"
+
+    confidence = _sigmoid_to_0_100(1.2 * score)
+
+    return {
+        "bias": bias,
+        "horizon": horizon,
+        "confidence": confidence,
+        "score": score,
+        "drivers": drivers,
+        "metrics": metrics,
+    }
+
+
+def render_etf_spot_panel(sig: Dict[str, object]) -> None:
+    st.markdown("### ETF Spot Signal Panel")
+    c1, c2, c3 = st.columns([2, 2, 2])
+    with c1:
+        st.metric("Bias", sig["bias"])
+    with c2:
+        st.metric("Horizon", sig["horizon"])
+    with c3:
+        st.metric("Confidence", f'{sig["confidence"]}/100')
+
+    with st.expander("Drivers & metrics"):
+        for d in sig.get("drivers", []):
+            st.markdown(f"- {d}")
+
+        m = sig.get("metrics", {})
+        st.markdown("**Key metrics:**")
+        st.write(
+            {
+                "curve_slope_%": None if m.get("curve_slope") is None else round(100 * m["curve_slope"], 3),
+                "RR25_vol_pts": None if m.get("RR25") is None else round(100 * m["RR25"], 3),
+                "BF25_vol_pts": None if m.get("BF25") is None else round(100 * m["BF25"], 3),
+                "front_ATM_IV_%": None if m.get("ATM_IV") is None else round(100 * m["ATM_IV"], 2),
+                "raw_score": round(float(sig.get("score", 0.0)), 3),
+            }
+        )
+
+    st.caption("Informational signal from derivatives-implied risk pricing; not an execution recommendation.")
 
 
 # =========================
@@ -660,8 +883,7 @@ for p in fut_paths:
         parsed = parse_futures(best, prefix)
 
         if show_debug:
-            fut_debug.append((p.name, prefix, None if best is None else list(best.columns),
-                              None if best is None else best.head(8)))
+            fut_debug.append((p.name, prefix, None if best is None else list(best.columns), None if best is None else best.head(8)))
 
         if not parsed.empty:
             futures_all.append(parsed)
@@ -700,13 +922,15 @@ for p in opt_paths:
                     call_px_col, put_px_col = pick_adjacent_or_nearest_latest(cols, k_idx)
                 else:
                     k_idx, call_px_col, put_px_col = None, None, None
-                diag.update({
-                    "strike_col": strike_col,
-                    "strike_idx": k_idx,
-                    "call_px_col": call_px_col,
-                    "put_px_col": put_px_col,
-                    "cols": cols,
-                })
+                diag.update(
+                    {
+                        "strike_col": strike_col,
+                        "strike_idx": k_idx,
+                        "call_px_col": call_px_col,
+                        "put_px_col": put_px_col,
+                        "cols": cols,
+                    }
+                )
                 diag["head20"] = best.head(20)
             opt_debug.append(diag)
 
@@ -743,10 +967,7 @@ for pfx in sorted(futures_df["product"].unique()):
     cname = FUTURES_NAME_MAP.get(pfx, pfx)
     sub = futures_df[futures_df["product"] == pfx].sort_values("expiry").copy()
     st.markdown(f"### {cname} ({pfx})")
-    st.plotly_chart(
-        px.line(sub, x="expiry", y="last", markers=True, title=f"{cname} — Futures curve"),
-        use_container_width=True
-    )
+    st.plotly_chart(px.line(sub, x="expiry", y="last", markers=True, title=f"{cname} — Futures curve"), use_container_width=True)
     st.dataframe(sub, use_container_width=True)
 
 
@@ -788,9 +1009,15 @@ for pfx in sorted(options_df["product"].unique()):
 
         if not ivdf.empty:
             st.plotly_chart(
-                px.line(ivdf, x="K", y="iv", color="cp", markers=True,
-                        title=f"{cname} — IV Smile | Expiry {expiry} | F≈{F:.2f}"),
-                use_container_width=True
+                px.line(
+                    ivdf,
+                    x="K",
+                    y="iv",
+                    color="cp",
+                    markers=True,
+                    title=f"{cname} — IV Smile | Expiry {expiry} | F≈{F:.2f}",
+                ),
+                use_container_width=True,
             )
 
             atm_iv = ivdf[(ivdf["K"] >= 0.98 * F) & (ivdf["K"] <= 1.02 * F)]["iv"].median()
@@ -802,8 +1029,8 @@ for pfx in sorted(options_df["product"].unique()):
                 skew_rows.append({"expiry": expiry, "T": T, "RR25": rr["RR25"], "BF25": rr["BF25"], "IV_ATM_proxy": rr["IV_ATM"]})
 
             ivdf["m"] = ivdf["K"] / F
-            ivdf = ivdf[(ivdf["m"] >= 0.8) & (ivdf["m"] <= 1.2)]
-            for _, rr0 in ivdf.iterrows():
+            ivdf2 = ivdf[(ivdf["m"] >= 0.8) & (ivdf["m"] <= 1.2)].copy()
+            for _, rr0 in ivdf2.iterrows():
                 surf_rows.append({"expiry": expiry, "T": T, "m": rr0["m"], "iv": rr0["iv"]})
 
     fwd_df = pd.DataFrame(fwd_rows, columns=["expiry", "T", "F"])
@@ -823,13 +1050,21 @@ for pfx in sorted(options_df["product"].unique()):
             dT = max(T2 - T1, 1e-9)
             roll_pct = (F2 / F1 - 1.0) * 100.0
             carry_ann = ((F2 / F1) ** (1.0 / dT) - 1.0) * 100.0
-            rows.append({"roll_from": str(e1), "roll_to": str(e2), "F_from": F1, "F_to": F2, "ΔT_years": dT,
-                         "roll_%": roll_pct, "carry_annualized_%": carry_ann})
+            rows.append(
+                {
+                    "roll_from": str(e1),
+                    "roll_to": str(e2),
+                    "F_from": F1,
+                    "F_to": F2,
+                    "ΔT_years": dT,
+                    "roll_%": roll_pct,
+                    "carry_annualized_%": carry_ann,
+                }
+            )
         carry_df = pd.DataFrame(rows)
         if not carry_df.empty:
             st.dataframe(carry_df, use_container_width=True)
-            st.plotly_chart(px.bar(carry_df, x="roll_to", y="carry_annualized_%", title="Carry (annualized) by next expiry"),
-                            use_container_width=True)
+            st.plotly_chart(px.bar(carry_df, x="roll_to", y="carry_annualized_%", title="Carry (annualized) by next expiry"), use_container_width=True)
     else:
         st.info("Forward curve unavailable (missing valid C/P parity pairs).")
 
@@ -861,11 +1096,31 @@ for pfx in sorted(options_df["product"].unique()):
         piv["m_mid"] = piv["m_bucket"].apply(lambda x: float((x.left + x.right) / 2.0))
         heat = piv.pivot(index="expiry", columns="m_mid", values="iv").sort_index()
 
-        st.plotly_chart(px.imshow(heat, aspect="auto", title="IV Surface (median IV by moneyness bucket)",
-                                  labels={"x": "Moneyness (K/F)", "y": "Expiry", "color": "IV"}),
-                        use_container_width=True)
+        st.plotly_chart(
+            px.imshow(
+                heat,
+                aspect="auto",
+                title="IV Surface (median IV by moneyness bucket)",
+                labels={"x": "Moneyness (K/F)", "y": "Expiry", "color": "IV"},
+            ),
+            use_container_width=True,
+        )
     else:
         st.info("IV surface unavailable (not enough solved IV).")
+
+    # =========================
+    # ETF Spot Signal Panel (NEW) — under each product
+    # =========================
+    fut_pfx = OPT_TO_FUT.get(pfx)
+    fut_sub = futures_df[futures_df["product"] == fut_pfx].sort_values("expiry").copy() if fut_pfx else None
+
+    sig = etf_spot_signal_panel(
+        futures_sub=fut_sub,
+        atm_term=atm_df,
+        skew_term=skew_df,
+        surf_points=surf_df,
+    )
+    render_etf_spot_panel(sig)
 
 
 if show_debug:
