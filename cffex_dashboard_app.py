@@ -781,8 +781,11 @@ def render_etf_spot_panel_row(
     st.markdown(
         f"""
         <div class="etf-panel">
-          <h3>📌 {opt_cn} ({opt_pfx}) <span class="smallcap">/ {opt_en}</span></h3>
-          <div class="subtitle">现货ETF: <b>{etf_name_cn}</b> ({etf_ticker}) ｜ 对应期货: {fut_cn} ({fut_pfx or "N/A"}) <span class="smallcap">/ {fut_en if fut_pfx else ""}</span></div>
+          <h3>📌 {etf_name_cn} ({etf_ticker})</h3>
+          <div class="subtitle">
+            对应期权: <b>{opt_cn}</b> ({opt_pfx}) <span class="smallcap">/ {opt_en}</span>
+            ｜ 对应期货: {fut_cn} ({fut_pfx or "N/A"}) <span class="smallcap">/ {fut_en if fut_pfx else ""}</span>
+          </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1151,7 +1154,7 @@ for pfx in sorted(options_df["product"].unique()):
 # =========================
 # 3) ETF Spot Signal Panel Summary (END)
 # =========================
-st.subheader("3) ETF Spot Signal Panel 汇总 (All products)")
+st.subheader("3) ETF Spot Signal Panel")
 
 if not signals_summary:
     st.info("No ETF spot signals available (missing curves / IV / skew inputs).")
