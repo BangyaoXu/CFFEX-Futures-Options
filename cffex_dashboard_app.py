@@ -49,6 +49,26 @@ OPT_PREFIXES = list(OPTIONS_NAME_MAP.keys())
 # Options product -> matching futures product (for curve info)
 OPT_TO_FUT = {"IO": "IF", "HO": "IH", "MO": "IM"}
 
+# Optional English display names
+OPTIONS_NAME_EN = {
+    "IO": "CSI 300 Index Options",
+    "MO": "CSI 1000 Index Options",
+    "HO": "SSE 50 Index Options",
+}
+FUTURES_NAME_EN = {
+    "IF": "CSI 300 Index Futures",
+    "IM": "CSI 1000 Index Futures",
+    "IH": "SSE 50 Index Futures",
+}
+
+# Corresponding ETF spot instruments (EDIT these tickers to your preferred ETF)
+# NOTE: China has multiple ETFs per index; put your actual tradable tickers here.
+ETF_MAP = {
+    "IO": {"name_cn": "沪深300 ETF", "ticker": "510300.SH"},
+    "MO": {"name_cn": "中证1000 ETF", "ticker": "159845.SZ"},
+    "HO": {"name_cn": "上证50 ETF", "ticker": "510050.SH"},
+}
+
 
 # =========================
 # Utilities
@@ -196,9 +216,7 @@ def extract_tables_from_mhtml_or_html(path: Path) -> List[pd.DataFrame]:
                 def _row_keep(sr: pd.Series) -> bool:
                     vals = ["" if pd.isna(x) else str(x).strip() for x in sr.values]
                     has_num = any(_num(x) is not None for x in vals)
-                    has_key = any(
-                        any(k in v for k in ["行权价", "最新价", "合约名称", "看涨", "看跌"]) for v in vals
-                    )
+                    has_key = any(any(k in v for k in ["行权价", "最新价", "合约名称", "看涨", "看跌"]) for v in vals)
                     return has_num or has_key
 
                 df0 = df0[df0.apply(_row_keep, axis=1)].reset_index(drop=True)
@@ -227,15 +245,7 @@ def extract_tables_from_mhtml_or_html(path: Path) -> List[pd.DataFrame]:
             N = min(4, len(padded))
             scored = []
             for i in range(N):
-                scored.append(
-                    (
-                        max(
-                            _score_header_row(padded[i], "options"),
-                            _score_header_row(padded[i], "futures"),
-                        ),
-                        i,
-                    )
-                )
+                scored.append((max(_score_header_row(padded[i], "options"), _score_header_row(padded[i], "futures")), i))
             scored.sort(reverse=True)
             header_idx = scored[0][1]
 
@@ -245,9 +255,7 @@ def extract_tables_from_mhtml_or_html(path: Path) -> List[pd.DataFrame]:
             cleaned = []
             for r in data:
                 has_num = any(_num(x) is not None for x in r)
-                keep_marker = (not has_num) and (
-                    any("看涨" in str(x) for x in r) or any("看跌" in str(x) for x in r)
-                )
+                keep_marker = (not has_num) and (any("看涨" in str(x) for x in r) or any("看跌" in str(x) for x in r))
                 if has_num or keep_marker:
                     cleaned.append(r)
 
@@ -514,7 +522,7 @@ def delta_forward(F: float, K: float, T: float, vol: float, is_call: bool) -> Op
 
 
 # =========================
-# ✅ Robust RR/BF via nearest delta (no strict interpolation)
+# Robust RR/BF via nearest delta
 # =========================
 def rr_bf_25d(ivdf: pd.DataFrame, tol: float = 0.08) -> Optional[Dict[str, float]]:
     """
@@ -594,7 +602,7 @@ def compute_robust_forward_from_parity(s: pd.DataFrame, T: float, r: float) -> T
 
 
 # =========================
-# ETF Spot Signal Panel (derivatives -> ETF spot tilt)
+# ETF Spot Signal Panel (summary at end)
 # =========================
 def _as_float(x) -> Optional[float]:
     try:
@@ -620,7 +628,7 @@ def _sigmoid_to_0_100(x: float) -> int:
     return int(round(100.0 * y))
 
 
-def _surface_horizon_from_points(surf_points: pd.DataFrame) -> str:
+def _surface_horizon_from_points(surf_points: Optional[pd.DataFrame]) -> str:
     if surf_points is None or surf_points.empty:
         return "3–10 trading days"
 
@@ -674,14 +682,14 @@ def etf_spot_signal_panel(
     if curve_slope is not None:
         if curve_slope > 0.002:
             score -= 0.8
-            drivers.append(f"Futures curve upward (contango-ish): slope ≈ {curve_slope*100:.2f}% (carry headwind for long risk)")
+            drivers.append(f"期货曲线上倾(Contango-ish)：斜率≈{curve_slope*100:.2f}%（风险偏弱/carry拖累）")
         elif curve_slope < -0.002:
             score += 0.8
-            drivers.append(f"Futures curve downward (backwardation-ish): slope ≈ {curve_slope*100:.2f}% (carry tailwind for long risk)")
+            drivers.append(f"期货曲线下倾(Backwardation-ish)：斜率≈{curve_slope*100:.2f}%（风险偏强/carry支撑）")
         else:
-            drivers.append(f"Futures curve ~flat: slope ≈ {curve_slope*100:.2f}% (carry impact small)")
+            drivers.append(f"期货曲线接近平坦：斜率≈{curve_slope*100:.2f}%（carry影响较小）")
     else:
-        drivers.append("Futures curve slope unavailable (insufficient maturities).")
+        drivers.append("期货曲线斜率不可得（合约不足）。")
 
     # ---- Front-expiry RR25/BF25
     rr25 = bf25 = None
@@ -700,26 +708,26 @@ def etf_spot_signal_panel(
     if rr25 is not None:
         if rr25 <= -rr_th:
             score -= 1.8
-            drivers.append(f"RR25 negative (puts rich): RR25 ≈ {rr25*100:.2f} vol pts → risk-off skew")
+            drivers.append(f"RR25为负（put更贵/偏保护）：RR25≈{rr25*100:.2f} vol pts → 风险偏谨慎")
         elif rr25 >= rr_th:
             score += 1.8
-            drivers.append(f"RR25 positive (calls rich): RR25 ≈ {rr25*100:.2f} vol pts → risk-on skew")
+            drivers.append(f"RR25为正（call更贵/偏上行）：RR25≈{rr25*100:.2f} vol pts → 风险偏积极")
         else:
-            drivers.append(f"RR25 near flat: RR25 ≈ {rr25*100:.2f} vol pts")
+            drivers.append(f"RR25接近平：RR25≈{rr25*100:.2f} vol pts")
     else:
-        drivers.append("RR25 unavailable (insufficient strikes/IV near ±25d).")
+        drivers.append("RR25不可得（±25Δ附近缺少可用IV）。")
 
     if bf25 is not None:
         if bf25 >= bf_th:
             score -= 1.0
-            drivers.append(f"BF25 elevated (wings rich): BF25 ≈ {bf25*100:.2f} vol pts → tail-risk priced")
+            drivers.append(f"BF25偏高（两翼更贵/尾部风险定价高）：BF25≈{bf25*100:.2f} vol pts")
         elif bf25 <= -bf_th:
             score += 0.7
-            drivers.append(f"BF25 cheap (wings cheap): BF25 ≈ {bf25*100:.2f} vol pts → complacency / carry regime")
+            drivers.append(f"BF25偏低（两翼更便宜/偏carry）：BF25≈{bf25*100:.2f} vol pts")
         else:
-            drivers.append(f"BF25 moderate: BF25 ≈ {bf25*100:.2f} vol pts")
+            drivers.append(f"BF25中性：BF25≈{bf25*100:.2f} vol pts")
     else:
-        drivers.append("BF25 unavailable (insufficient strikes/IV near ±25d).")
+        drivers.append("BF25不可得。")
 
     # ---- Front-expiry ATM IV (risk regime)
     atm_iv = None
@@ -733,54 +741,71 @@ def etf_spot_signal_panel(
     if atm_iv is not None:
         if atm_iv >= 0.25:
             score -= 0.8
-            drivers.append(f"Front ATM IV high: ~{atm_iv*100:.2f}% → higher expected move / defensive tilt")
+            drivers.append(f"近月ATM IV偏高：~{atm_iv*100:.2f}%（波动预期高/偏防守）")
         elif atm_iv <= 0.15:
             score += 0.5
-            drivers.append(f"Front ATM IV low: ~{atm_iv*100:.2f}% → stable regime / risk-on drift")
+            drivers.append(f"近月ATM IV偏低：~{atm_iv*100:.2f}%（稳定/偏风险）")
         else:
-            drivers.append(f"Front ATM IV moderate: ~{atm_iv*100:.2f}%")
+            drivers.append(f"近月ATM IV中等：~{atm_iv*100:.2f}%")
     else:
-        drivers.append("ATM IV proxy unavailable.")
+        drivers.append("ATM IV不可得。")
 
     # ---- Horizon via IV surface concentration
     horizon = _surface_horizon_from_points(surf_points)
 
     # ---- Bias mapping
     if score >= 1.5:
-        bias = "LONG ETF spot (risk-on tilt)"
+        bias = "做多 ETF 现货 (LONG / risk-on)"
     elif score <= -1.5:
-        bias = "SHORT / UNDERWEIGHT ETF spot (risk-off tilt)"
+        bias = "做空/降低仓位 (SHORT/UNDERWEIGHT / risk-off)"
     else:
-        bias = "NEUTRAL / WAIT (no strong edge)"
+        bias = "观望/中性 (NEUTRAL)"
 
     confidence = _sigmoid_to_0_100(1.2 * score)
 
-    return {
-        "bias": bias,
-        "horizon": horizon,
-        "confidence": confidence,
-        "score": score,
-        "drivers": drivers,
-        "metrics": metrics,
-    }
+    return {"bias": bias, "horizon": horizon, "confidence": confidence, "score": score, "drivers": drivers, "metrics": metrics}
 
 
-def render_etf_spot_panel(sig: Dict[str, object]) -> None:
-    st.markdown("### ETF Spot Signal Panel")
-    c1, c2, c3 = st.columns([2, 2, 2])
+def render_etf_spot_panel_row(
+    *,
+    opt_pfx: str,
+    opt_cn: str,
+    opt_en: str,
+    fut_pfx: Optional[str],
+    fut_cn: str,
+    fut_en: str,
+    etf_name_cn: str,
+    etf_ticker: str,
+    sig: Dict[str, object],
+) -> None:
+    st.markdown(
+        f"""
+        <div class="etf-panel">
+          <h3>📌 {opt_cn} ({opt_pfx}) <span class="smallcap">/ {opt_en}</span></h3>
+          <div class="subtitle">现货ETF: <b>{etf_name_cn}</b> ({etf_ticker}) ｜ 对应期货: {fut_cn} ({fut_pfx or "N/A"}) <span class="smallcap">/ {fut_en if fut_pfx else ""}</span></div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    c1, c2, c3 = st.columns([2.4, 2.0, 1.3])
     with c1:
-        st.metric("Bias", sig["bias"])
+        st.markdown('<div class="etf-panel kpi-label">方向 / Bias</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="etf-panel kpi">{sig["bias"]}</div>', unsafe_allow_html=True)
     with c2:
-        st.metric("Horizon", sig["horizon"])
+        st.markdown('<div class="etf-panel kpi-label">持有周期 / Horizon</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="etf-panel kpi">{sig["horizon"]}</div>', unsafe_allow_html=True)
     with c3:
-        st.metric("Confidence", f'{sig["confidence"]}/100')
+        st.markdown('<div class="etf-panel kpi-label">置信度 / Confidence</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="etf-panel kpi">{sig["confidence"]}/100</div>', unsafe_allow_html=True)
 
-    with st.expander("Drivers & metrics"):
+    with st.expander("驱动因素 & 指标 (Drivers & metrics)", expanded=False):
         for d in sig.get("drivers", []):
-            st.markdown(f"- {d}")
+            st.markdown(f'<div class="etf-panel driver">- {d}</div>', unsafe_allow_html=True)
 
         m = sig.get("metrics", {})
-        st.markdown("**Key metrics:**")
+        st.markdown("<hr/>", unsafe_allow_html=True)
+        st.markdown('<div class="etf-panel metricbox"><b>Key metrics:</b></div>', unsafe_allow_html=True)
         st.write(
             {
                 "curve_slope_%": None if m.get("curve_slope") is None else round(100 * m["curve_slope"], 3),
@@ -791,7 +816,12 @@ def render_etf_spot_panel(sig: Dict[str, object]) -> None:
             }
         )
 
-    st.caption("Informational signal from derivatives-implied risk pricing; not an execution recommendation.")
+        st.markdown(
+            '<div class="etf-panel smallcap">注：基于衍生品隐含信息的提示性信号，不构成投资建议。</div>',
+            unsafe_allow_html=True,
+        )
+
+    st.markdown("---")
 
 
 # =========================
@@ -832,6 +862,22 @@ def split_fut_opt(files: List[Path]) -> Tuple[List[Path], List[Path]]:
 # =========================
 st.set_page_config(page_title="CFFEX Dashboard", layout="wide")
 st.title("CFFEX Futures & Options Dashboard")
+
+# --- Global CSS for ETF signal panel fonts ---
+st.markdown(
+    """
+    <style>
+      .etf-panel h3 { margin: 0.25rem 0 0.5rem 0; font-size: 1.05rem; }
+      .etf-panel .subtitle { color: #666; font-size: 0.85rem; margin-bottom: 0.5rem; }
+      .etf-panel .kpi { font-size: 0.92rem; font-weight: 650; }
+      .etf-panel .kpi-label { font-size: 0.78rem; color: #666; }
+      .etf-panel .driver { font-size: 0.86rem; line-height: 1.25rem; }
+      .etf-panel .metricbox { font-size: 0.82rem; }
+      .etf-panel .smallcap { font-size: 0.78rem; color: #777; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
@@ -922,15 +968,7 @@ for p in opt_paths:
                     call_px_col, put_px_col = pick_adjacent_or_nearest_latest(cols, k_idx)
                 else:
                     k_idx, call_px_col, put_px_col = None, None, None
-                diag.update(
-                    {
-                        "strike_col": strike_col,
-                        "strike_idx": k_idx,
-                        "call_px_col": call_px_col,
-                        "put_px_col": put_px_col,
-                        "cols": cols,
-                    }
-                )
+                diag.update({"strike_col": strike_col, "strike_idx": k_idx, "call_px_col": call_px_col, "put_px_col": put_px_col, "cols": cols})
                 diag["head20"] = best.head(20)
             opt_debug.append(diag)
 
@@ -976,6 +1014,8 @@ for pfx in sorted(futures_df["product"].unique()):
 # =========================
 st.subheader("2) Options analytics (Smile / Forward / Surface / Skew / Carry & Roll)")
 
+signals_summary: List[Dict[str, object]] = []
+
 for pfx in sorted(options_df["product"].unique()):
     cname = OPTIONS_NAME_MAP.get(pfx, pfx)
     st.markdown(f"## {cname} ({pfx})")
@@ -1009,14 +1049,7 @@ for pfx in sorted(options_df["product"].unique()):
 
         if not ivdf.empty:
             st.plotly_chart(
-                px.line(
-                    ivdf,
-                    x="K",
-                    y="iv",
-                    color="cp",
-                    markers=True,
-                    title=f"{cname} — IV Smile | Expiry {expiry} | F≈{F:.2f}",
-                ),
+                px.line(ivdf, x="K", y="iv", color="cp", markers=True, title=f"{cname} — IV Smile | Expiry {expiry} | F≈{F:.2f}"),
                 use_container_width=True,
             )
 
@@ -1050,17 +1083,7 @@ for pfx in sorted(options_df["product"].unique()):
             dT = max(T2 - T1, 1e-9)
             roll_pct = (F2 / F1 - 1.0) * 100.0
             carry_ann = ((F2 / F1) ** (1.0 / dT) - 1.0) * 100.0
-            rows.append(
-                {
-                    "roll_from": str(e1),
-                    "roll_to": str(e2),
-                    "F_from": F1,
-                    "F_to": F2,
-                    "ΔT_years": dT,
-                    "roll_%": roll_pct,
-                    "carry_annualized_%": carry_ann,
-                }
-            )
+            rows.append({"roll_from": str(e1), "roll_to": str(e2), "F_from": F1, "F_to": F2, "ΔT_years": dT, "roll_%": roll_pct, "carry_annualized_%": carry_ann})
         carry_df = pd.DataFrame(rows)
         if not carry_df.empty:
             st.dataframe(carry_df, use_container_width=True)
@@ -1097,30 +1120,57 @@ for pfx in sorted(options_df["product"].unique()):
         heat = piv.pivot(index="expiry", columns="m_mid", values="iv").sort_index()
 
         st.plotly_chart(
-            px.imshow(
-                heat,
-                aspect="auto",
-                title="IV Surface (median IV by moneyness bucket)",
-                labels={"x": "Moneyness (K/F)", "y": "Expiry", "color": "IV"},
-            ),
+            px.imshow(heat, aspect="auto", title="IV Surface (median IV by moneyness bucket)", labels={"x": "Moneyness (K/F)", "y": "Expiry", "color": "IV"}),
             use_container_width=True,
         )
     else:
         st.info("IV surface unavailable (not enough solved IV).")
 
-    # =========================
-    # ETF Spot Signal Panel (NEW) — under each product
-    # =========================
+    # ---- Collect signal for summary at end
     fut_pfx = OPT_TO_FUT.get(pfx)
     fut_sub = futures_df[futures_df["product"] == fut_pfx].sort_values("expiry").copy() if fut_pfx else None
 
-    sig = etf_spot_signal_panel(
-        futures_sub=fut_sub,
-        atm_term=atm_df,
-        skew_term=skew_df,
-        surf_points=surf_df,
+    sig = etf_spot_signal_panel(futures_sub=fut_sub, atm_term=atm_df, skew_term=skew_df, surf_points=surf_df)
+
+    etf_info = ETF_MAP.get(pfx, {"name_cn": f"{cname} 对应ETF", "ticker": "TBD"})
+    signals_summary.append(
+        {
+            "opt_pfx": pfx,
+            "opt_cn": OPTIONS_NAME_MAP.get(pfx, pfx),
+            "opt_en": OPTIONS_NAME_EN.get(pfx, pfx),
+            "fut_pfx": fut_pfx,
+            "fut_cn": FUTURES_NAME_MAP.get(fut_pfx, fut_pfx or ""),
+            "fut_en": FUTURES_NAME_EN.get(fut_pfx, fut_pfx or ""),
+            "etf_name_cn": etf_info.get("name_cn", "ETF"),
+            "etf_ticker": etf_info.get("ticker", "TBD"),
+            "sig": sig,
+        }
     )
-    render_etf_spot_panel(sig)
+
+
+# =========================
+# 3) ETF Spot Signal Panel Summary (END)
+# =========================
+st.subheader("3) ETF Spot Signal Panel 汇总 (All products)")
+
+if not signals_summary:
+    st.info("No ETF spot signals available (missing curves / IV / skew inputs).")
+else:
+    # Sort by confidence desc
+    signals_summary = sorted(signals_summary, key=lambda x: x["sig"].get("confidence", 0), reverse=True)
+
+    for item in signals_summary:
+        render_etf_spot_panel_row(
+            opt_pfx=item["opt_pfx"],
+            opt_cn=item["opt_cn"],
+            opt_en=item["opt_en"],
+            fut_pfx=item["fut_pfx"],
+            fut_cn=item["fut_cn"],
+            fut_en=item["fut_en"],
+            etf_name_cn=item["etf_name_cn"],
+            etf_ticker=item["etf_ticker"],
+            sig=item["sig"],
+        )
 
 
 if show_debug:
