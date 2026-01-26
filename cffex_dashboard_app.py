@@ -305,6 +305,35 @@ def fetch_index_spot_price(index_ticker: str) -> Tuple[Optional[float], Optional
     """
     return yahoo_last_price(index_ticker)
 
+# =========================
+# ✅ Spot line helper (Index spot for a futures prefix)
+# =========================
+@st.cache_data(ttl=60, show_spinner=False)
+def get_index_spot_for_fut_prefix(
+    fut_pfx: str,
+    manual_index_spot: Dict[str, Optional[float]],
+) -> Tuple[Optional[float], Optional[dt.datetime], str, str, str]:
+    """
+    Returns:
+      (spot_px, spot_ts, source, note, idx_ticker)
+    source in {"yahoo","manual","none"}.
+    """
+    idx_info = INDEX_MAP.get(fut_pfx)
+    if not idx_info:
+        return None, None, "none", "no-index-map", ""
+
+    idx_ticker = idx_info["ticker"]
+
+    spot_px, spot_ts, note = fetch_index_spot_price(idx_ticker)
+    if spot_px is not None:
+        return float(spot_px), spot_ts, "yahoo", note, idx_ticker
+
+    # fallback manual
+    mpx = manual_index_spot.get(idx_ticker)
+    if mpx is not None:
+        return float(mpx), dt.datetime.now(CN_TZ), "manual", "manual-override", idx_ticker
+
+    return None, None, "none", note, idx_ticker
 
 # =========================
 # MHTML/HTML table extraction
@@ -1122,8 +1151,29 @@ for pfx in sorted(futures_df["product"].unique()):
     cname = FUTURES_NAME_MAP.get(pfx, pfx)
     sub = futures_df[futures_df["product"] == pfx].sort_values("expiry").copy()
     st.markdown(f"### {cname} ({pfx})")
-    st.plotly_chart(px.line(sub, x="expiry", y="last", markers=True, title=f"{cname} — Futures curve"), use_container_width=True)
+
+    # ✅ fetch index spot for this futures prefix (IF/IH/IM)
+    spot_px, spot_ts, spot_source, spot_note, idx_ticker = get_index_spot_for_fut_prefix(
+        pfx, manual_index_spot
+    )
+
+    fig = px.line(sub, x="expiry", y="last", markers=True, title=f"{cname} — Futures curve")
+
+    # ✅ add spot hline if units look compatible
+    curve_level = _as_float(sub["last"].iloc[0]) if not sub.empty else None
+    if spot_px is not None and curve_level is not None and _unit_sanity_ok(curve_level, spot_px):
+        ts_str = spot_ts.strftime("%Y-%m-%d %H:%M:%S") if spot_ts else "unknown-time"
+        fig.add_hline(
+            y=spot_px,
+            annotation_text=f"Index spot ({idx_ticker}) = {spot_px:.2f} [{spot_source}] {ts_str}",
+            annotation_position="top left",
+        )
+    elif show_debug and idx_ticker:
+        st.caption(f"[debug] skip spot line for {pfx}: spot={spot_px} source={spot_source} note={spot_note}")
+
+    st.plotly_chart(fig, use_container_width=True)
     st.dataframe(sub, use_container_width=True)
+
 
 
 # =========================
@@ -1188,7 +1238,22 @@ for pfx in sorted(options_df["product"].unique()):
     if not fwd_df.empty:
         fwd_df = fwd_df.sort_values("expiry")
         st.markdown(f"### {cname} — Implied forward curve")
-        st.plotly_chart(px.line(fwd_df, x="expiry", y="F", markers=True, title="Implied Forward vs Expiry"), use_container_width=True)
+        fig_fwd = px.line(fwd_df, x="expiry", y="F", markers=True, title="Implied Forward vs Expiry")
+
+        # ✅ add same index spot hline (if compatible)
+        ref_F = _as_float(fwd_df["F"].median()) if not fwd_df.empty else None
+        if spot_px is not None and ref_F is not None and _unit_sanity_ok(ref_F, spot_px):
+            ts_str = spot_ts.strftime("%Y-%m-%d %H:%M:%S") if spot_ts else "unknown-time"
+            fig_fwd.add_hline(
+                y=spot_px,
+                annotation_text=f"Index spot ({idx_ticker}) = {spot_px:.2f} [{spot_source}] {ts_str}",
+                annotation_position="top left",
+            )
+        elif show_debug and idx_ticker:
+            st.caption(f"[debug] skip spot line for {cname} forward: spot={spot_px} source={spot_source} note={note}")
+        
+        st.plotly_chart(fig_fwd, use_container_width=True)
+
         st.dataframe(fwd_df, use_container_width=True)
 
         st.markdown(f"### {cname} — Forward carry & roll (adjacent expiries)")
