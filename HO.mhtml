@@ -2,16 +2,16 @@ From: <Saved by Blink>
 Snapshot-Content-Location: http://www.cffex.com.cn/yshq/
 Subject: =?utf-8?Q?=E5=BB=B6=E6=97=B6=E8=A1=8C=E6=83=85=20|=20=E4=B8=AD=E5=9B=BD?=
  =?utf-8?Q?=E9=87=91=E8=9E=8D=E6=9C=9F=E8=B4=A7=E4=BA=A4=E6=98=93=E6=89=80?=
-Date: Sun, 25 Jan 2026 00:09:39 -0500
+Date: Mon, 26 Jan 2026 18:14:18 -0500
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----"
+	boundary="----MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----"
 
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: text/html
-Content-ID: <frame-E262B91789A2B034353E0B576FBE2FBC@mhtml.blink>
+Content-ID: <frame-AB30F4F582604E66E16D7FA33DD08C2F@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://www.cffex.com.cn/yshq/
 
@@ -42,7 +42,7 @@ X2BZGrj1ABVHWMLx92PBxhM">
 css" rel=3D"stylesheet">
    =20
     <link href=3D"http://www.cffex.com.cn/r/cms/www/default/css/website.min=
-.css?0.663212103138055" rel=3D"stylesheet">=20
+.css?0.7728772396071357" rel=3D"stylesheet">=20
 
 
 
@@ -443,14 +443,14 @@ nput" id=3D"movesearchword">
 		<ul class=3D"head_ul">
 			<li class=3D"app"><img src=3D"http://www.cffex.com.cn/r/cms/www/default/=
 images/head-bg1.png"> APP
-				<div class=3D"drop_down_div drop_down_app" style=3D"display: none;">
+				<div class=3D"drop_down_div drop_down_app">
 					<img src=3D"http://www.cffex.com.cn/r/cms/www/default/images/new-app.p=
 ng" width=3D"99" height=3D"100" alt=3D""> <span class=3D"text">=E6=89=AB=E4=
 =B8=80=E6=89=AB =E4=B8=8B=E8=BD=BDAPP </span>
 				</div></li>
 			<li class=3D"second_li">|</li>
 			<li class=3D"weixin"><a>=E5=BE=AE=E4=BF=A1</a>
-				<div class=3D"drop_down_div drop_down_wx" style=3D"display: none;">
+				<div class=3D"drop_down_div drop_down_wx">
 					<img src=3D"http://www.cffex.com.cn/r/cms/www/default/images/head-new-=
 img1.png" width=3D"99" height=3D"100" alt=3D"">
 					<span class=3D"text">=E5=BE=AE=E4=BF=A1=E4=BA=8C=E7=BB=B4=E7=A0=81</sp=
@@ -459,7 +459,7 @@ an>
 			<li class=3D"second_li">|</li>
 			<li class=3D"weibo">=E5=BE=AE=E5=8D=9A<img src=3D"http://www.cffex.com.c=
 n/r/cms/www/default/images/head-bg2.png" class=3D"weibo_img">
-				<div class=3D"drop_down_div drop_down_wb" style=3D"display: none;">
+				<div class=3D"drop_down_div drop_down_wb">
 					<a href=3D"http://weibo.com/cffexfabu" target=3D"_blank"><img src=3D"h=
 ttp://www.cffex.com.cn/r/cms/www/default/images/head-weibo-img3.jpg" width=
 =3D"154" height=3D"54"></a>
@@ -468,8 +468,7 @@ ttp://www.cffex.com.cn/r/cms/www/default/images/head-weibo-img3.jpg" width=
 			<li class=3D"second_li">|</li>
 			<li class=3D"xglj">=E7=9B=B8=E5=85=B3=E7=BD=91=E7=AB=99<img src=3D"http:=
 //www.cffex.com.cn/r/cms/www/default/images/head-bg2.png">
-				<div class=3D"drop_down_div drop_down_lianjie" style=3D"display: none;"=
->
+				<div class=3D"drop_down_div drop_down_lianjie">
 					<ul>
 						<li><a href=3D"http://www.e-cffex.com.cn/" target=3D"_blank">=E4=B8=
 =AD=E9=87=91=E6=89=80=E6=9C=9F=E8=B4=A7=E6=9C=9F=E6=9D=83=E5=AD=A6=E9=99=A2=
@@ -672,8 +671,7 @@ li>
             <a class=3D"nav_li_a" href=3D"http://www.cffex.com.cn/hyxx/">=
 =E6=9C=8D=E5=8A=A1</a><span>|</span>
             <div class=3D"nav_service_div nav_li_div" style=3D"display: non=
-e; height: 300px; padding-top: 20px; margin-top: 0px; padding-bottom: 20px;=
- margin-bottom: 0px;">
+e;">
                 <ul style=3D"height:300px">
                     <li><a class=3D"first_a" href=3D"http://www.cffex.com.c=
 n/hyxx/">=E4=BC=9A=E5=91=98=E6=9C=8D=E5=8A=A1</a></li>
@@ -749,9 +747,9 @@ n/PFMIxxpl/">PFMI =E4=BF=A1=E6=81=AF=E6=8A=AB=E9=9C=B2</a></li>
 =E8=A7=84=E5=88=99</a><span>|</span>
 
 
-            <div class=3D"nav_data_div nav_li_div" style=3D"padding-top: 0p=
-x; margin-top: 0px; padding-bottom: 20px; margin-bottom: 0px; width: 170px;=
- display: none; height: 138px;">
+            <div class=3D"nav_data_div nav_li_div" style=3D"  padding-top: =
+0px; margin-top: 0px; padding-bottom: 20px; margin-bottom: 0px; width: 170p=
+x;">
                 <div class=3D"nav_data_first">
                     <a href=3D"http://www.cffex.com.cn/jysgz/">=E4=BA=A4=E6=
 =98=93=E6=89=80=E8=A7=84=E5=88=99</a>
@@ -773,9 +771,7 @@ x; margin-top: 0px; padding-bottom: 20px; margin-bottom: 0px; width: 170px;=
         <li class=3D"nav_li">
             <a class=3D"nav_li_a" href=3D"http://www.cffex.com.cn/gk/">=E5=
 =85=B3=E4=BA=8E</a><span>|</span>
-            <div class=3D"nav_about_div nav_li_div" style=3D"display: none;=
- height: 150px; padding-top: 20px; margin-top: 0px; padding-bottom: 20px; m=
-argin-bottom: 0px;">
+            <div class=3D"nav_about_div nav_li_div">
                 <div class=3D"nav_about_left">
                     <a class=3D"first_a" href=3D"http://www.cffex.com.cn/gk=
 /">=E4=BA=A4=E6=98=93=E6=89=80=E4=BB=8B=E7=BB=8D</a>
@@ -999,10 +995,10 @@ k/">=E5=B9=B4=E5=BA=A6=E5=B8=82=E5=9C=BA=E6=A6=82=E5=86=B5</a>
 =3D"click: refreshGraph">
 						=E6=9C=9F=E8=B4=A7
 					</div>
-					<div class=3D"head_title click_div_switch2 click_div1" data-bind=3D"cl=
-ick: refreshGraphOption" style=3D"border-left: none; cursor:pointer;font-si=
-ze:12px;border:1px solid #ccd0de;border-bottom:none;width: 58px;text-align:=
-center;padding-left:0px">
+					<div class=3D"head_title click_div_switch2  click_div1" data-bind=3D"c=
+lick: refreshGraphOption" style=3D"border-left: none; cursor:pointer;font-s=
+ize:12px;border:1px solid #ccd0de;border-bottom:none;width: 58px;text-align=
+:center;padding-left:0px">
 						=E6=9C=9F=E6=9D=83
 					</div>
 					<div class=3D"head_title click_div_switch2" data-bind=3D"click: refres=
@@ -1030,19 +1026,17 @@ i>
 						=09
 						=09
 						=09
-							<li name=3D"TS" data-bind=3D"click:getDelayProData" class=3D"">TS</l=
-i>
+							<li name=3D"TS" data-bind=3D"click:getDelayProData">TS</li>
 						=09
 							<li name=3D"TF" data-bind=3D"click:getDelayProData" style=3D"border-=
-right: 1px solid #ccd0de" class=3D"">TF</li>
+right: 1px solid #ccd0de">TF</li>
 						=09
-							<li name=3D"T" data-bind=3D"click:getDelayProData" class=3D"">T</li>
+							<li name=3D"T" data-bind=3D"click:getDelayProData">T</li>
 						=09
-							<li name=3D"TL" data-bind=3D"click:getDelayProData" class=3D"">TL</l=
-i>
+							<li name=3D"TL" data-bind=3D"click:getDelayProData">TL</li>
 							=20
 						</ul>
-						<ul class=3D"data_delay_ul" style=3D"display: block;">
+						<ul class=3D"data_delay_ul" style=3D"">
 							=20
 						=09
 						=09
@@ -1067,7 +1061,7 @@ ction">HO</li>
 				<div class=3D"data_time_delay">
 					<div class=3D"cp_time_delay" style=3D"display: block">
 						<div class=3D"data_table_time" data-bind=3D"text:delayDate">2026=E5=
-=B9=B401=E6=9C=8823=E6=97=A5</div>
+=B9=B401=E6=9C=8826=E6=97=A5</div>
 						<div class=3D"time_delay_table">
 							<table id=3D"delayTable" width=3D"928px" border=3D"1px" bordercolor=
 =3D"#c4c4c4" cellspacing=3D"0" cellpadding=3D"0" style=3D"display: none;">
@@ -1095,27 +1089,27 @@ ction">HO</li>
 									<td data-bind=3D"text:productid">IH</td>
 									<td data-bind=3D"text:instrumentid">IH2602</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:openprice">3067.80</td>
+ext:openprice">3043.20</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:highestprice">3068.80</td>
+ext:highestprice">3095.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lowestprice">3028.40</td>
+ext:lowestprice">3041.00</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lastprice">3032.40</td>
+ext:lastprice">3053.20</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:updown,css:color" class=3D"color_green">-22.20</td>
+ext:updown,css:color" class=3D"color_red">+16.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:bprice">3032.00</td>
+ext:bprice">3053.40</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
 ext:bamount">1</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:sprice">3033.20</td>
+ext:sprice">3054.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
 ext:samount">1</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:volumn">11094</td>
+ext:volumn">16234</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:oi">16044</td>
+ext:oi">17585</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts"><img =
 src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg2.png"></td>
 								</tr>
@@ -1147,30 +1141,33 @@ h=3D"1444" height=3D"600" style=3D"position: absolute; width: 722px; height=
  absolute; width: 722px; height: 300px;"></canvas><input type=3D"text" clas=
 s=3D"dygraph-roller" size=3D"2" style=3D"display: none; top: 255px; left: 5=
 7px;"><div style=3D"position: absolute; font-size: 14px; width: 50px; top: =
-248.405px; left: 3px; text-align: right;"><div class=3D"dygraph-axis-label =
-dygraph-axis-label-y">3030</div></div><div style=3D"position: absolute; fon=
-t-size: 14px; width: 50px; top: 185.342px; left: 3px; text-align: right;"><=
-div class=3D"dygraph-axis-label dygraph-axis-label-y">3040</div></div><div =
-style=3D"position: absolute; font-size: 14px; width: 50px; top: 122.279px; =
+271.048px; left: 3px; text-align: right;"><div class=3D"dygraph-axis-label =
+dygraph-axis-label-y">3040</div></div><div style=3D"position: absolute; fon=
+t-size: 14px; width: 50px; top: 224.567px; left: 3px; text-align: right;"><=
+div class=3D"dygraph-axis-label dygraph-axis-label-y">3050</div></div><div =
+style=3D"position: absolute; font-size: 14px; width: 50px; top: 178.086px; =
 left: 3px; text-align: right;"><div class=3D"dygraph-axis-label dygraph-axi=
-s-label-y">3050</div></div><div style=3D"position: absolute; font-size: 14p=
-x; width: 50px; top: 59.2162px; left: 3px; text-align: right;"><div class=
-=3D"dygraph-axis-label dygraph-axis-label-y">3060</div></div><div style=3D"=
-position: absolute; font-size: 14px; width: 50px; top: 0px; left: 3px; text=
--align: right;"><div class=3D"dygraph-axis-label dygraph-axis-label-y">3070=
-</div></div><div style=3D"position: absolute; font-size: 14px; width: 60px;=
- text-align: center; top: 283px; left: 26px;"><div class=3D"dygraph-axis-la=
-bel dygraph-axis-label-x">09:30</div></div><div style=3D"position: absolute=
-; font-size: 14px; width: 60px; text-align: center; top: 283px; left: 191.2=
-5px;"><div class=3D"dygraph-axis-label dygraph-axis-label-x">10:30</div></d=
-iv><div style=3D"position: absolute; font-size: 14px; width: 60px; text-ali=
-gn: center; top: 283px; left: 356.5px;"><div class=3D"dygraph-axis-label dy=
-graph-axis-label-x">11:30/13:00</div></div><div style=3D"position: absolute=
-; font-size: 14px; width: 60px; text-align: center; top: 283px; left: 521.7=
-5px;"><div class=3D"dygraph-axis-label dygraph-axis-label-x">14:00</div></d=
-iv><div style=3D"position: absolute; font-size: 14px; width: 60px; text-ali=
-gn: right; top: 283px; left: 662px;"><div class=3D"dygraph-axis-label dygra=
-ph-axis-label-x">15:00</div></div></div></div>
+s-label-y">3060</div></div><div style=3D"position: absolute; font-size: 14p=
+x; width: 50px; top: 131.606px; left: 3px; text-align: right;"><div class=
+=3D"dygraph-axis-label dygraph-axis-label-y">3070</div></div><div style=3D"=
+position: absolute; font-size: 14px; width: 50px; top: 85.1248px; left: 3px=
+; text-align: right;"><div class=3D"dygraph-axis-label dygraph-axis-label-y=
+">3080</div></div><div style=3D"position: absolute; font-size: 14px; width:=
+ 50px; top: 38.6441px; left: 3px; text-align: right;"><div class=3D"dygraph=
+-axis-label dygraph-axis-label-y">3090</div></div><div style=3D"position: a=
+bsolute; font-size: 14px; width: 60px; text-align: center; top: 283px; left=
+: 26px;"><div class=3D"dygraph-axis-label dygraph-axis-label-x">09:30</div>=
+</div><div style=3D"position: absolute; font-size: 14px; width: 60px; text-=
+align: center; top: 283px; left: 191.25px;"><div class=3D"dygraph-axis-labe=
+l dygraph-axis-label-x">10:30</div></div><div style=3D"position: absolute; =
+font-size: 14px; width: 60px; text-align: center; top: 283px; left: 356.5px=
+;"><div class=3D"dygraph-axis-label dygraph-axis-label-x">11:30/13:00</div>=
+</div><div style=3D"position: absolute; font-size: 14px; width: 60px; text-=
+align: center; top: 283px; left: 521.75px;"><div class=3D"dygraph-axis-labe=
+l dygraph-axis-label-x">14:00</div></div><div style=3D"position: absolute; =
+font-size: 14px; width: 60px; text-align: right; top: 283px; left: 662px;">=
+<div class=3D"dygraph-axis-label dygraph-axis-label-x">15:00</div></div></d=
+iv></div>
 											</div>
 											<div class=3D"delay_pic_one clearFloat">
 												<div class=3D"delay_pic_left">
@@ -1195,30 +1192,33 @@ ass=3D"dygraph-roller" size=3D"2" style=3D"display: none; top: 255px; left:=
  57px;"><div style=3D"position: absolute; font-size: 14px; width: 50px; top=
 : 266px; left: 3px; text-align: right;"><div class=3D"dygraph-axis-label dy=
 graph-axis-label-y">0</div></div><div style=3D"position: absolute; font-siz=
-e: 14px; width: 50px; top: 224.973px; left: 3px; text-align: right;"><div c=
+e: 14px; width: 50px; top: 230.787px; left: 3px; text-align: right;"><div c=
 lass=3D"dygraph-axis-label dygraph-axis-label-y">100</div></div><div style=
-=3D"position: absolute; font-size: 14px; width: 50px; top: 176.945px; left:=
+=3D"position: absolute; font-size: 14px; width: 50px; top: 188.574px; left:=
  3px; text-align: right;"><div class=3D"dygraph-axis-label dygraph-axis-lab=
 el-y">200</div></div><div style=3D"position: absolute; font-size: 14px; wid=
-th: 50px; top: 128.918px; left: 3px; text-align: right;"><div class=3D"dygr=
-aph-axis-label dygraph-axis-label-y">300</div></div><div style=3D"position:=
- absolute; font-size: 14px; width: 50px; top: 80.8902px; left: 3px; text-al=
-ign: right;"><div class=3D"dygraph-axis-label dygraph-axis-label-y">400</di=
-v></div><div style=3D"position: absolute; font-size: 14px; width: 50px; top=
-: 32.8628px; left: 3px; text-align: right;"><div class=3D"dygraph-axis-labe=
-l dygraph-axis-label-y">500</div></div><div style=3D"position: absolute; fo=
-nt-size: 14px; width: 60px; text-align: center; top: 283px; left: 26px;"><d=
-iv class=3D"dygraph-axis-label dygraph-axis-label-x">09:30</div></div><div =
-style=3D"position: absolute; font-size: 14px; width: 60px; text-align: cent=
-er; top: 283px; left: 191.25px;"><div class=3D"dygraph-axis-label dygraph-a=
-xis-label-x">10:30</div></div><div style=3D"position: absolute; font-size: =
-14px; width: 60px; text-align: center; top: 283px; left: 356.5px;"><div cla=
-ss=3D"dygraph-axis-label dygraph-axis-label-x">11:30/13:00</div></div><div =
-style=3D"position: absolute; font-size: 14px; width: 60px; text-align: cent=
-er; top: 283px; left: 521.75px;"><div class=3D"dygraph-axis-label dygraph-a=
-xis-label-x">14:00</div></div><div style=3D"position: absolute; font-size: =
-14px; width: 60px; text-align: right; top: 283px; left: 662px;"><div class=
-=3D"dygraph-axis-label dygraph-axis-label-x">15:00</div></div></div></div>
+th: 50px; top: 146.36px; left: 3px; text-align: right;"><div class=3D"dygra=
+ph-axis-label dygraph-axis-label-y">300</div></div><div style=3D"position: =
+absolute; font-size: 14px; width: 50px; top: 104.147px; left: 3px; text-ali=
+gn: right;"><div class=3D"dygraph-axis-label dygraph-axis-label-y">400</div=
+></div><div style=3D"position: absolute; font-size: 14px; width: 50px; top:=
+ 61.9341px; left: 3px; text-align: right;"><div class=3D"dygraph-axis-label=
+ dygraph-axis-label-y">500</div></div><div style=3D"position: absolute; fon=
+t-size: 14px; width: 50px; top: 19.7209px; left: 3px; text-align: right;"><=
+div class=3D"dygraph-axis-label dygraph-axis-label-y">600</div></div><div s=
+tyle=3D"position: absolute; font-size: 14px; width: 60px; text-align: cente=
+r; top: 283px; left: 26px;"><div class=3D"dygraph-axis-label dygraph-axis-l=
+abel-x">09:30</div></div><div style=3D"position: absolute; font-size: 14px;=
+ width: 60px; text-align: center; top: 283px; left: 191.25px;"><div class=
+=3D"dygraph-axis-label dygraph-axis-label-x">10:30</div></div><div style=3D=
+"position: absolute; font-size: 14px; width: 60px; text-align: center; top:=
+ 283px; left: 356.5px;"><div class=3D"dygraph-axis-label dygraph-axis-label=
+-x">11:30/13:00</div></div><div style=3D"position: absolute; font-size: 14p=
+x; width: 60px; text-align: center; top: 283px; left: 521.75px;"><div class=
+=3D"dygraph-axis-label dygraph-axis-label-x">14:00</div></div><div style=3D=
+"position: absolute; font-size: 14px; width: 60px; text-align: right; top: =
+283px; left: 662px;"><div class=3D"dygraph-axis-label dygraph-axis-label-x"=
+>15:00</div></div></div></div>
 											</div>
 											<div class=3D"explain_text">
 												=E8=AF=B4=E6=98=8E=EF=BC=9A<span>(1) =E6=88=90=E4=BA=A4=E9=87=
@@ -1242,27 +1242,27 @@ xis-label-x">14:00</div></div><div style=3D"position: absolute; font-size: =
 									<td data-bind=3D"text:productid">IH</td>
 									<td data-bind=3D"text:instrumentid">IH2603</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:openprice">3069.00</td>
+ext:openprice">3049.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:highestprice">3072.60</td>
+ext:highestprice">3099.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lowestprice">3036.20</td>
+ext:lowestprice">3045.00</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lastprice">3037.80</td>
+ext:lastprice">3058.20</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:updown,css:color" class=3D"color_green">-20.20</td>
+ext:updown,css:color" class=3D"color_red">+15.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:bprice">3037.80</td>
+ext:bprice">3058.20</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:bamount">4</td>
+ext:bamount">1</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:sprice">3039.00</td>
+ext:sprice">3058.40</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:samount">5</td>
+ext:samount">1</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:volumn">38693</td>
+ext:volumn">52871</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:oi">63802</td>
+ext:oi">70243</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts"><img =
 src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td>
 								</tr>
@@ -1326,27 +1326,27 @@ n: 1px auto; margin-left: -5.5%" id=3D"IH2603volumnChart"></div>
 									<td data-bind=3D"text:productid">IH</td>
 									<td data-bind=3D"text:instrumentid">IH2606</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:openprice">3067.00</td>
+ext:openprice">3048.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:highestprice">3070.00</td>
+ext:highestprice">3099.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lowestprice">3035.80</td>
+ext:lowestprice">3043.20</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lastprice">3036.00</td>
+ext:lastprice">3059.00</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:updown,css:color" class=3D"color_green">-19.60</td>
+ext:updown,css:color" class=3D"color_red">+17.20</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:bprice">3036.00</td>
+ext:bprice">3058.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:bamount">1</td>
+ext:bamount">2</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:sprice">3036.20</td>
+ext:sprice">3059.20</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:samount">4</td>
+ext:samount">1</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:volumn">8525</td>
+ext:volumn">10906</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:oi">23537</td>
+ext:oi">24666</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts"><img =
 src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td>
 								</tr>
@@ -1410,27 +1410,27 @@ n: 1px auto; margin-left: -5.5%" id=3D"IH2606volumnChart"></div>
 									<td data-bind=3D"text:productid">IH</td>
 									<td data-bind=3D"text:instrumentid">IH2609</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:openprice">3031.40</td>
+ext:openprice">3016.00</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:highestprice">3036.80</td>
+ext:highestprice">3070.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lowestprice">3005.00</td>
+ext:lowestprice">3014.40</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lastprice">3006.00</td>
+ext:lastprice">3029.40</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:updown,css:color" class=3D"color_green">-15.60</td>
+ext:updown,css:color" class=3D"color_red">+18.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:bprice">3006.80</td>
+ext:bprice">3029.20</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
 ext:bamount">1</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:sprice">3007.00</td>
+ext:sprice">3030.80</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
 ext:samount">1</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:volumn">3725</td>
+ext:volumn">4616</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:oi">5388</td>
+ext:oi">6130</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts"><img =
 src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td>
 								</tr>
@@ -1497,8 +1497,7 @@ n: 1px auto; margin-left: -5.5%" id=3D"IH2609volumnChart"></div>
 
 						<div class=3D"time_delay_table">
 							<table id=3D"delayTable_option" width=3D"928px" border=3D"1px" borde=
-rcolor=3D"#71747e" cellspacing=3D"0" cellpadding=3D"0" style=3D"display: ta=
-ble;">
+rcolor=3D"#71747e" cellspacing=3D"0" cellpadding=3D"0" style=3D"">
 								<thead>
 								<tr>
 									<td>=E5=9B=BE=E8=A1=A8</td>
@@ -1650,18 +1649,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-2650</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">28</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">15</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=939.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">398.80</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">24</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">17</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9122.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">410.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2650</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">1.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">55</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">207</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">1.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=930.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">22</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">216</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-2650</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -1782,17 +1781,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-2700</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">35</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">0</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">4</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
+or_c">=E2=86=9118.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">357.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2700</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">2.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=911.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">30</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">141</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">1.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=931.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">115</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">165</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-2700</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -1912,18 +1911,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-2750</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">79</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">12</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9319.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">289.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">74</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">15</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9124.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">313.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2750</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">3.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=911.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">62</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">141</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">1.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=931.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">75</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">151</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-2750</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -2043,18 +2042,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-2800</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">464</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">157</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9318.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">242.20</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">462</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">96</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9120.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">263.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2800</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">5.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=912.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">208</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">532</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">2.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=932.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">220</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">517</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-2800</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -2174,18 +2173,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-2850</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">511</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">227</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9315.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">195.60</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">618</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">243</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9119.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">215.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2850</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">8.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=913.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">292</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">967</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">4.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=933.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">408</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">941</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-2850</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -2305,18 +2304,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-2900</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">481</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">500</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9317.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">150.60</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">622</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">771</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9115.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">166.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2900</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">13.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=915.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">518</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">1284</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">8.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=934.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">998</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">1611</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-2900</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -2436,18 +2435,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-2950</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">532</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">990</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9312.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">110.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">484</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">1375</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9115.20</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">125.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2950</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">23.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=919.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">1430</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">968</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">16.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=936.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">1208</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">1259</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-2950</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -2567,18 +2566,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3000</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">1645</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">2713</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=937.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">77.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">1500</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">5090</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9112.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">89.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3000</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">40.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9114.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">2608</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">2957</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">32.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=937.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">2413</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">2918</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3000</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -2698,18 +2697,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3050</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">2627</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">4882</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=934.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">52.40</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">2859</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">7271</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=919.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">62.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3050</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">66.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9118.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">3852</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">2355</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">56.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=939.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">3995</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">2345</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3050</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -2829,18 +2828,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3100</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">4721</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">5627</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">4834</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">10388</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">36.80</td>
+or_c">=E2=86=918.20</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">45.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3100</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">100.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9121.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">2891</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">1984</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">88.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9312.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">3034</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">1965</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3100</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -2960,18 +2959,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3150</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">3885</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">1970</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">4069</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">4458</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">25.40</td>
+or_c">=E2=86=918.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">34.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3150</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">139.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9124.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">1335</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">1475</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">125.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9314.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">2253</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">1468</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3150</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -3091,18 +3090,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3200</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">7331</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">3378</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">6550</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">6619</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">18.60</td>
+or_c">=E2=86=915.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">24.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3200</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">181.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9121.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">455</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">1051</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">167.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9314.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">945</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">1107</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3200</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -3222,18 +3221,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3250</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">2547</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">925</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">2463</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">1423</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">13.60</td>
+or_c">=E2=86=914.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">17.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3250</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">225.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9121.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">50</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">220</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">211.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9316.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">79</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">250</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3250</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -3353,18 +3352,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3300</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">1571</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">700</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">1701</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">1071</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">10.20</td>
+or_c">=E2=86=913.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">14.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3300</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">268.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9120.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">38</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">132</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">257.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9315.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">84</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">111</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3300</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -3484,18 +3483,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3350</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">1001</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">224</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">1016</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">508</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">8.00</td>
+or_c">=E2=86=912.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">10.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3350</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">308.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9111.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">15</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">75</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">295.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9325.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">60</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">68</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3350</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -3615,17 +3614,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3400</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">609</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">410</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">670</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">500</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">6.80</td>
+or_c">=E2=86=912.20</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">9.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3400</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">358.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9112.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">3</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">342.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9327.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">1</td>
 									<td class=3D"option-j" data-bind=3D"text:poi">98</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3400</td>
@@ -3746,16 +3745,16 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3450</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">476</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">117</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">677</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">596</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">6.00</td>
+or_c">=E2=86=911.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">7.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3450</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">407.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9112.60</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">391.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9328.00</td>
 									<td class=3D"option-i" data-bind=3D"text:pvolumn">2</td>
 									<td class=3D"option-j" data-bind=3D"text:poi">108</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
@@ -3877,18 +3876,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2602-C-3500</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">2398</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">1702</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">2933</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">2428</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">5.80</td>
+or_c">=E2=86=911.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">6.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3500</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">464.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9116.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">17</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">87</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">436.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9332.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">36</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">107</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2602-P-3500</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -4136,18 +4135,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2250</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">43</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">7</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=938.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">802.20</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">45</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">15</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9119.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">810.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2250</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">2.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">38</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">521</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">0.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=931.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">73</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">509</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2250</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -4267,18 +4266,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2300</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">53</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">0</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">50</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">25</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
+or_c">=E2=86=9130.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">772.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2300</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">2.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">63</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">340</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">1.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=931.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">76</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">310</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2300</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -4398,18 +4397,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2350</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">35</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">6</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=931.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">710.40</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">32</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">27</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9120.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">713.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2350</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">2.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">45</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">166</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">1.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=931.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">53</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">161</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2350</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -4529,18 +4528,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2400</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">49</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">6</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=930.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">662.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">44</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">23</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9132.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">675.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2400</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">3.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">21</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">234</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">1.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=931.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">56</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">222</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2400</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -4660,18 +4659,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2450</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">59</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">7</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9311.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">600.80</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">56</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">33</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9127.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">621.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2450</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">2.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">31</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">122</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">1.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=932.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">12</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">134</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2450</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -4791,18 +4790,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2500</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">137</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">10</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9310.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">553.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">136</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">26</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9127.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">571.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2500</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">3.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">71</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">227</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">1.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=932.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">60</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">221</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2500</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -4923,17 +4922,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2600</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">72</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">4</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=939.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">454.80</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">21</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9126.20</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">472.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2600</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">5.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=911.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">66</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">176</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">2.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=933.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">38</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">173</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2600</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -5054,17 +5053,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2700</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">134</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">21</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9315.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">351.80</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">14</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9124.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">377.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2700</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">8.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=912.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">59</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">270</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">4.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=934.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">84</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">268</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2700</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -5184,18 +5183,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2750</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">54</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">53</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9315.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">304.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">52</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">29</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9130.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">334.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2750</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">11.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=913.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">68</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">435</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">6.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=934.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">151</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">513</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2750</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -5315,18 +5314,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2800</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">364</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">135</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9315.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">257.80</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">357</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">133</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9122.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">280.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2800</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">14.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=914.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">52</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">634</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">10.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=936.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">45</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">622</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2800</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -5446,18 +5445,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2850</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">61</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">43</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9310.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">218.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">88</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">44</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9122.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">237.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2850</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">22.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=915.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">40</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">182</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">17.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=935.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">93</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">227</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2850</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -5577,18 +5576,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2900</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">182</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">67</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9310.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">176.60</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">198</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">83</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9117.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">192.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2900</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">31.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=917.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">190</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">635</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">27.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=934.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">279</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">578</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2900</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -5708,18 +5707,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-2950</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">86</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">91</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=939.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">139.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">89</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">53</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9122.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">161.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2950</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">46.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9110.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">457</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">615</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">41.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=935.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">141</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">639</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-2950</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -5839,18 +5838,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3000</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">847</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">391</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=936.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">110.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">1015</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">520</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9115.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">125.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3000</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">67.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9117.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">266</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">585</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">61.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=934.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">477</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">664</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3000</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -5970,18 +5969,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3050</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">313</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">187</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">500</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">500</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">87.20</td>
+or_c">=E2=86=9117.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">102.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3050</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">93.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9120.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">158</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">621</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">87.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=935.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">568</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">665</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3050</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -6101,18 +6100,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3100</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">834</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">506</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">865</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">597</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">68.00</td>
+or_c">=E2=86=9113.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">81.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3100</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">123.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9118.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">217</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">446</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">117.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=935.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">97</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">477</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3100</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -6232,18 +6231,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3150</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">468</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">154</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">514</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">442</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">53.00</td>
+or_c">=E2=86=9113.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">66.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3150</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">157.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9120.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">67</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">271</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">149.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9312.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">72</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">290</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3150</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -6363,18 +6362,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3200</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">1120</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">579</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">1529</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">934</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">42.40</td>
+or_c">=E2=86=9113.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">56.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3200</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">197.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9121.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">36</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">288</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">190.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=938.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">94</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">306</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3200</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -6494,18 +6493,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3250</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">218</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">18</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">267</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">135</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">32.60</td>
+or_c">=E2=86=9114.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">47.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3250</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">236.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9119.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">41</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">84</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">222.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9317.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">18</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">88</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3250</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -6625,18 +6624,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3300</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">1103</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">366</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">1393</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">593</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=914.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">27.80</td>
+or_c">=E2=86=919.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">37.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3300</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">272.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9113.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">8</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">82</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">259.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9324.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">21</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">87</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3300</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -6756,17 +6755,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3350</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">362</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">27</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">396</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">78</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=914.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">22.60</td>
+or_c">=E2=86=918.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">31.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3350</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">317.80</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
 									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9112.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">1</td>
+or_p">=E2=86=910.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">0</td>
 									<td class=3D"option-j" data-bind=3D"text:poi">43</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3350</td>
@@ -6887,17 +6886,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3400</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">1026</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">115</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">1076</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">236</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=914.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">18.80</td>
+or_c">=E2=86=917.20</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">26.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3400</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">345.20</td>
-									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
-olor_p">=E2=86=936.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">2</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
+									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
+or_p">=E2=86=910.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">0</td>
 									<td class=3D"option-j" data-bind=3D"text:poi">31</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3400</td>
@@ -7018,17 +7017,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3450</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">187</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">61</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">214</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">91</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">15.60</td>
+or_c">=E2=86=918.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">23.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3450</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">392.80</td>
-									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
-olor_p">=E2=86=936.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">2</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
+									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
+or_p">=E2=86=910.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">0</td>
 									<td class=3D"option-j" data-bind=3D"text:poi">15</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3450</td>
@@ -7149,18 +7148,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2603-C-3500</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">596</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">195</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">715</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">441</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">13.60</td>
+or_c">=E2=86=915.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">19.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3500</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">458.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9112.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">3</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">26</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">440.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9328.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">4</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">24</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2603-P-3500</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -7408,18 +7407,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-2700</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">0</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">0</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">2</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">2</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
+or_c">=E2=86=9143.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">405.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2700</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">10.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=912.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">8</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">3</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">7.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=932.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">92</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">90</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-2700</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -7539,18 +7538,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-2750</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">1</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">1</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">2</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">4</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=915.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">337.00</td>
+or_c">=E2=86=9143.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">360.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2750</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">0</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">0</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">11.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=934.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">51</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">42</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-2750</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -7670,17 +7669,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-2800</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">0</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">0</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">2</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">2</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
+or_c">=E2=86=9142.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">317.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2800</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">21.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=913.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">7</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">20.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=933.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">4</td>
 									<td class=3D"option-j" data-bind=3D"text:poi">6</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-2800</td>
@@ -7801,11 +7800,11 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-2850</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">1</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">2</td>
 									<td class=3D"option-b" data-bind=3D"text:cvolumn">1</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=914.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">248.60</td>
+or_c">=E2=86=9147.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">283.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2850</td>
 									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
@@ -7932,17 +7931,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-2900</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">2</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">2</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">8</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">7</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=917.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">208.40</td>
+or_c">=E2=86=9136.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">236.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2900</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">40.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=916.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">28</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">38.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9310.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">50</td>
 									<td class=3D"option-j" data-bind=3D"text:poi">28</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-2900</td>
@@ -8063,18 +8062,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-2950</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">12</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">10</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">13</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">14</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=911.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">169.20</td>
+or_c">=E2=86=919.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">178.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2950</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">55.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=917.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">41</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">58</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">54.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9311.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">49</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">49</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-2950</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -8195,17 +8194,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-3000</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">14</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">19</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">14</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=911.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">137.40</td>
+or_c">=E2=86=9114.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">155.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3000</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">86.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9118.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">72</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">71</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">78.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=939.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">22</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">80</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-3000</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -8326,17 +8325,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-3050</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">91</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">102</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">41</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=914.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">115.00</td>
+or_c">=E2=86=9113.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">130.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3050</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">103.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9111.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">103</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">71</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">100.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9314.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">20</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">79</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-3050</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -8456,18 +8455,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-3100</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">323</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">163</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">332</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">85</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=916.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">96.20</td>
+or_c">=E2=86=9113.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">110.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3100</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">137.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9115.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">44</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">45</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">127.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9317.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">29</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">60</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-3100</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -8587,18 +8586,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-3150</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">66</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">9</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">78</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">31</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=914.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">75.00</td>
+or_c">=E2=86=9110.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">91.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3150</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">171.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9117.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">23</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">51</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">159.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9318.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">18</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">53</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-3150</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -8718,18 +8717,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-3200</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">21</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">23</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">27</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">19</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=918.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">65.60</td>
+or_c">=E2=86=9110.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">76.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3200</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">207.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9122.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">20</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">29</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">195.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9318.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">19</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">32</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-3200</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -8849,18 +8848,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-3250</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">10</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">11</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">9</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">8</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=917.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">54.40</td>
+or_c">=E2=86=9117.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">72.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3250</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">245.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9120.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">4</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">9</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">234.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9318.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">5</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">10</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-3250</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -8980,18 +8979,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-3300</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">11</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">5</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">21</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">18</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">41.00</td>
+or_c">=E2=86=9113.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">59.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3300</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">280.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9115.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">2</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">2</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">272.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9319.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">9</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">5</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-3300</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -9112,10 +9111,10 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-3350</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">6</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">4</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">0</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">35.20</td>
+or_c">=E2=86=910.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3350</td>
 									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
@@ -9242,18 +9241,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2604-C-3400</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">30</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">92</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">39</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">50</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">28.00</td>
+or_c">=E2=86=9112.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">45.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3400</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">0</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">0</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">358.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9318.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">21</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">12</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2604-P-3400</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -9502,17 +9501,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-2400</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">37</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">3</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=932.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">652.20</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">0</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=910.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2400</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">2.40</td>
-									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
-olor_p">=E2=86=931.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">146</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">696</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">2.80</td>
+									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
+or_p">=E2=86=910.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">67</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">673</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-2400</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -9639,11 +9638,11 @@ or_c">=E2=86=910.00</td>
 									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2450</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">3.00</td>
-									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
-olor_p">=E2=86=931.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">81</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">116</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">3.60</td>
+									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
+or_p">=E2=86=910.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">22</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">127</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-2450</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -9770,11 +9769,11 @@ or_c">=E2=86=910.00</td>
 									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2500</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">4.20</td>
-									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
-olor_p">=E2=86=931.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">111</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">263</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">5.40</td>
+									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
+or_p">=E2=86=911.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">137</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">291</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-2500</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -9894,18 +9893,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-2600</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">47</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">3</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=9311.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">463.40</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">49</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">2</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9132.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">488.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2600</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">9.60</td>
-									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
-olor_p">=E2=86=931.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">144</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">218</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">10.00</td>
+									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
+or_p">=E2=86=910.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">132</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">275</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-2600</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -10025,18 +10024,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-2700</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">51</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">2</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">53</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">7</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">385.60</td>
+or_c">=E2=86=9134.20</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">403.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2700</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">21.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">68</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">279</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">20.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=931.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">48</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">314</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-2700</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -10156,18 +10155,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-2800</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">189</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">23</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=933.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">300.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">190</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">16</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9121.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">314.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2800</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">45.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=916.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">88</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">224</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">43.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=931.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">22</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">233</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-2800</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -10287,18 +10286,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-2900</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">196</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">24</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">195</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">11</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">235.40</td>
+or_c">=E2=86=9115.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">251.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2900</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">79.60</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9112.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">71</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">278</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">75.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=936.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">34</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">293</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-2900</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -10418,18 +10417,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-3000</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">548</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">248</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">661</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">247</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=916.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">184.40</td>
+or_c">=E2=86=919.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">194.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3000</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">127.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9119.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">107</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">445</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">123.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=935.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">109</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">470</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-3000</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -10549,18 +10548,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-3100</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">649</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">215</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">577</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">429</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=914.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">140.60</td>
+or_c">=E2=86=918.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">151.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3100</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">191.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9128.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">60</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">180</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">179.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=939.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">91</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">205</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-3100</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -10680,18 +10679,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-3200</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">311</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">46</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">309</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">22</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=9111.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">112.00</td>
+or_c">=E2=86=917.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">119.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3200</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">260.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9126.20</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">246.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9311.40</td>
 									<td class=3D"option-i" data-bind=3D"text:pvolumn">10</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">266</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">269</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-3200</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -10811,18 +10810,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-3300</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">1152</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">92</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">1100</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">216</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=9110.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">86.80</td>
+or_c">=E2=86=919.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">96.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3300</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">334.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9129.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">10</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">210</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">323.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=939.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">22</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">230</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-3300</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -10942,18 +10941,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-3400</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">647</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">9</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">644</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">18</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=919.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">66.60</td>
+or_c">=E2=86=9110.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">77.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3400</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">413.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9126.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">2</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">66</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">398.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9315.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">8</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">68</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-3400</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -11073,18 +11072,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2606-C-3500</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">679</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">77</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">783</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">233</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=918.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">53.40</td>
+or_c">=E2=86=914.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">60.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3500</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">489.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9116.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">7</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">8</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">485.80</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=939.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">14</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">14</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2606-P-3500</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -11332,18 +11331,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-2600</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">79</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">5</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=938.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">450.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">95</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">32</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9129.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">478.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2600</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">27.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=913.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">117</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">413</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">27.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=930.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">149</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">345</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-2600</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -11464,17 +11463,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-2700</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">91</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">1</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=933.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">375.00</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">0</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=910.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2700</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">48.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=915.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">95</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">258</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">45.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=934.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">48</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">289</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-2700</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -11594,18 +11593,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-2800</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">99</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">2</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">96</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">5</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">310.40</td>
+or_c">=E2=86=9128.80</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">334.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2800</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">80.00</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">81.40</td>
 									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=919.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">25</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">131</td>
+or_p">=E2=86=910.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">38</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">118</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-2800</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -11725,18 +11724,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-2900</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">128</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">42</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">123</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">21</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">257.20</td>
+or_c">=E2=86=9120.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">277.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2900</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">121.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=919.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">7</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">84</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">126.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=934.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">6</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">85</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-2900</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -11857,17 +11856,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-3000</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">264</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">57</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">29</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">209.00</td>
+or_c">=E2=86=9119.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">231.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3000</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">177.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9119.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">11</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">64</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">177.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=933.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">27</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">63</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-3000</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -11987,18 +11986,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-3100</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">89</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">2</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">83</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">7</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=916.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">169.80</td>
+or_c">=E2=86=9124.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">195.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3100</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">219.60</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">233.00</td>
 									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
-olor_p">=E2=86=934.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">3</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">82</td>
+olor_p">=E2=86=9313.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">26</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">81</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-3100</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -12118,18 +12117,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-3200</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">135</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">16</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">161</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">38</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=916.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">139.00</td>
+or_c">=E2=86=9118.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">163.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3200</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">312.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9119.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">14</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">106</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">298.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9314.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">35</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">125</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-3200</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -12249,18 +12248,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-3300</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">157</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">5</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">171</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">22</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=918.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">117.60</td>
+or_c">=E2=86=9110.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">132.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3300</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">386.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9119.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">7</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">75</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">383.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=932.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">16</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">86</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-3300</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -12380,18 +12379,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-3400</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">486</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">13</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">537</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">162</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=919.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">99.60</td>
+or_c">=E2=86=9112.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">115.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3400</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">469.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9126.80</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">7</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">64</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">455.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9313.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">28</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">79</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-3400</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -12511,18 +12510,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2609-C-3500</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">155</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">107</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">210</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">116</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=9112.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">89.40</td>
+or_c">=E2=86=919.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">99.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3500</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">555.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9129.40</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">9</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">59</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">534.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9318.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">6</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">61</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2609-P-3500</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -12770,18 +12769,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2612-C-2700</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">189</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">16</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=933.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">408.00</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">191</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">22</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9117.20</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">425.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2700</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">67.40</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=915.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">58</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">292</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">62.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=935.40</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">29</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">310</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2612-P-2700</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -12901,18 +12900,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2612-C-2800</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">69</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">0</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">70</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">5</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
+or_c">=E2=86=9117.40</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">358.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2800</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">100.20</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=915.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">2</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">65</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">101.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=935.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">4</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">62</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2612-P-2800</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -13032,18 +13031,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2612-C-2900</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">63</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">59</td>
-									<td class=3D"option-c color_green" data-bind=3D"text:cupdown,css:c=
-olor_c">=E2=86=933.20</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">290.20</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">62</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">11</td>
+									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
+or_c">=E2=86=9117.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">306.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">2900</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">151.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9113.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">63</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">162</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">142.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=939.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">10</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">158</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2612-P-2900</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -13163,18 +13162,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2612-C-3000</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">63</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">68</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">71</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">34</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">251.00</td>
+or_c">=E2=86=9118.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">269.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3000</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">210.80</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9119.20</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">53</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">87</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">199.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=938.00</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">14</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">95</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2612-P-3000</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -13294,17 +13293,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2612-C-3100</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">132</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">85</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">113</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">38</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=913.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">215.00</td>
+or_c">=E2=86=9114.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">228.80</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3100</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">272.00</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=9118.60</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">54</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">255.00</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9315.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">21</td>
 									<td class=3D"option-j" data-bind=3D"text:poi">89</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2612-P-3100</td>
@@ -13425,18 +13424,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2612-C-3200</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">181</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">13</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">179</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">35</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=914.80</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">188.20</td>
+or_c">=E2=86=9118.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">200.20</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3200</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">0</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">108</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">326.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9312.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">5</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">104</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2612-P-3200</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -13556,18 +13555,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2612-C-3300</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">201</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">38</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">197</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">28</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=916.60</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">163.80</td>
+or_c">=E2=86=9119.00</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">177.00</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3300</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">0</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">135</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">393.40</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9319.80</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">4</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">133</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2612-P-3300</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -13688,17 +13687,17 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2612-C-3400</td>
 									<td class=3D"option-a" data-bind=3D"text:coi">152</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">0</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">4</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=910.00</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">--</td>
+or_c">=E2=86=9126.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">165.40</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3400</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">0</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">100</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">476.60</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9314.60</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">4</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">96</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2612-P-3400</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -13818,18 +13817,18 @@ mg src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></td=
 >
 									<td class=3D"option-k" data-bind=3D"text:instrumentid_c" style=3D"=
 display:none">HO2612-C-3500</td>
-									<td class=3D"option-a" data-bind=3D"text:coi">260</td>
-									<td class=3D"option-b" data-bind=3D"text:cvolumn">39</td>
+									<td class=3D"option-a" data-bind=3D"text:coi">272</td>
+									<td class=3D"option-b" data-bind=3D"text:cvolumn">58</td>
 									<td class=3D"option-c color_red" data-bind=3D"text:cupdown,css:col=
-or_c">=E2=86=912.40</td>
-									<td class=3D"option-d" data-bind=3D"text:clastprice">122.00</td>
+or_c">=E2=86=919.60</td>
+									<td class=3D"option-d" data-bind=3D"text:clastprice">133.60</td>
 									<td class=3D"option-e" data-bind=3D"text:point" style=3D"color:#3B=
 79B7;font-weight:bold;background-color:#ECF6FF">3500</td>
-									<td class=3D"option-f" data-bind=3D"text:plastprice">--</td>
-									<td class=3D"option-h color_red" data-bind=3D"text:pupdown,css:col=
-or_p">=E2=86=910.00</td>
-									<td class=3D"option-i" data-bind=3D"text:pvolumn">0</td>
-									<td class=3D"option-j" data-bind=3D"text:poi">38</td>
+									<td class=3D"option-f" data-bind=3D"text:plastprice">553.20</td>
+									<td class=3D"option-h color_green" data-bind=3D"text:pupdown,css:c=
+olor_p">=E2=86=9319.20</td>
+									<td class=3D"option-i" data-bind=3D"text:pvolumn">3</td>
+									<td class=3D"option-j" data-bind=3D"text:poi">39</td>
 									<td class=3D"option-l" data-bind=3D"text:instrumentid_p" style=3D"=
 display:none">HO2612-P-3500</td>
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_P"><im=
@@ -13952,8 +13951,8 @@ gin: 1px auto; margin-left: -5.5%" id=3D"HO2612-P-3500volumnChart"></div>
 						<!--=E8=82=A1=E6=8C=87-->
 						<div class=3D"time_delay_table">
 							<table id=3D"delayTable_GCB" width=3D"928px" border=3D"1px" borderco=
-lor=3D"#c4c4c4" cellspacing=3D"0" cellpadding=3D"0" style=3D"display: none;=
-">
+lor=3D"#c4c4c4" cellspacing=3D"0" cellpadding=3D"0" style=3D"display: none"=
+>
 								<thead>
 								<tr>
 									<td>=E6=8C=87=E6=95=B0</td>
@@ -13971,15 +13970,15 @@ lor=3D"#c4c4c4" cellspacing=3D"0" cellpadding=3D"0" style=3D"display: none;=
 									<td data-bind=3D"text:indexname">=E5=9B=BD=E5=80=BA=E6=9C=9F=E6=8C=
 =872=E5=B9=B4=E6=9C=9F</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:openprice">106.015</td>
+ext:openprice">106.040</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:highestprice">106.051</td>
+ext:highestprice">106.044</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lowestprice">106.015</td>
+ext:lowestprice">105.999</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lastprice">106.034</td>
+ext:lastprice">106.007</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:updown,css:color" class=3D"color_red">+0.010</td>
+ext:updown,css:color" class=3D"color_green">-0.025</td>
 
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_GCB"><=
 img src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></t=
@@ -14028,15 +14027,15 @@ uto; margin-left: -5.5%" id=3D"TSpriceChart">
 									<td data-bind=3D"text:indexname">=E5=9B=BD=E5=80=BA=E6=9C=9F=E6=8C=
 =875=E5=B9=B4=E6=9C=9F</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:openprice">115.430</td>
+ext:openprice">115.436</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:highestprice">115.496</td>
+ext:highestprice">115.479</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lowestprice">115.414</td>
+ext:lowestprice">115.376</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lastprice">115.447</td>
+ext:lastprice">115.414</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:updown,css:color" class=3D"color_red">+0.044</td>
+ext:updown,css:color" class=3D"color_green">-0.027</td>
 
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_GCB"><=
 img src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></t=
@@ -14085,15 +14084,15 @@ uto; margin-left: -5.5%" id=3D"TFpriceChart">
 									<td data-bind=3D"text:indexname">=E5=9B=BD=E5=80=BA=E6=9C=9F=E6=8C=
 =8710=E5=B9=B4=E6=9C=9F</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:openprice">128.970</td>
+ext:openprice">128.982</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:highestprice">129.054</td>
+ext:highestprice">129.024</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lowestprice">128.947</td>
+ext:lowestprice">128.917</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:lastprice">128.982</td>
+ext:lastprice">128.964</td>
 									<td style=3D"text-align: right; padding-right: 5px" data-bind=3D"t=
-ext:updown,css:color" class=3D"color_red">+0.041</td>
+ext:updown,css:color" class=3D"color_green">-0.024</td>
 
 									<td class=3D"last_td" data-bind=3D"click:$parent.showCharts_GCB"><=
 img src=3D"http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png"></t=
@@ -14164,7 +14163,7 @@ uto; margin-left: -5.5%" id=3D"TpriceChart">
 =E6=89=80=E6=9C=89=E8=80=85=E4=B8=8D=E6=89=BF=E6=8B=85=E4=BB=BB=E4=BD=95=E6=
 =B3=95=E5=BE=8B=E8=B4=A3=E4=BB=BB=E3=80=82</p>
                                         <br>
-					<p class=3D"ifcaretip" style=3D"display: none; margin-top: -10px;">* =
+					<p class=3D"ifcaretip" style=3D"display: none; margin-top: -10px">* =
 =E4=B8=AD=E5=9B=BD=E5=9B=BD=E5=80=BA=E6=9C=9F=E8=B4=A7=E6=94=B6=E7=9B=8A=E6=
 =8C=87=E6=95=B0=E7=9A=84=E6=95=B0=E6=8D=AE=E6=9D=A5=E6=BA=90=E4=B8=BA=E4=B8=
 =AD=E8=AF=81=E5=95=86=E5=93=81=E6=8C=87=E6=95=B0=E6=9C=89=E9=99=90=E8=B4=A3=
@@ -14319,7 +14318,7 @@ cordcode=3D31011502009052" target=3D"_blank" style=3D"color: #aaaaae">=E6=
 
 
 </body></html>
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/u/cms/www/202101/28191507nbcl.png
@@ -14663,7 +14662,7 @@ hHujQiQmk/92IasZ1s9Ch9Uta0qKaPeOhyw7/ZpdKrU0ZZlUrkNEstEkH8VbRjgOyY1ZUgMpZK2J
 mtaQMr3XO+pdv1GN23+kaIus1kb4SBHVblTjTzsX8y859cUHPX9251c29WwKLSmhm3KXGkti3eB6
 rMe01dzI2aWphXFnpnaib2culBQFEbgA/H8ALiI3EysggNoAAAAASUVORK5CYII=
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/foot-img4.png
@@ -14746,7 +14745,7 @@ QLHo26L+JKJGS/TgL1jkQtDMmUcCpk075tW1a8OD1r+8ahXpoTGGNpeQ7O9+yDVfvRpjTk4eBNA9
 AvnXHodBiIAmjdzfv8ErLKxS3b17ATREqhYNRBUR0fQwa8Z/9hklffCB9H1U3fzufwIMAKhH3WF9
 c4qgAAAAAElFTkSuQmCC
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/foot-img2_1.png
@@ -14791,7 +14790,7 @@ cxtjDXVgaCJntVqI5HJI/fzhHBEJRWwcXNbHwSkwmKYMCf6rrP5Tsgq6CvokgupWAKeeB61fAaB1
 POjZFQB6lgflX0QKHBiyQGCc9SCWOfUIpXeAtyX9FEvGNN/fAgwAGP/N9uCPYdsAAAAASUVORK5C
 YII=
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/foot-img5_1.jpg
@@ -14853,7 +14852,7 @@ k5bpuWuievLbV21tdP8Am9cE0M0zmGB5+XW97X2d9rr8/kfOH/BKL/gkxcfBXXbP4ofE2zjj8UQq
 W0HQmIf+x9wINzcEfKbgqSEQEiIMWOZCBD+hdFFehn2fYvN8W8Zi3q9EltFdEl2/FvV6n9QZBkGE
 yfBxweDWi1be8n1bfd/clotD/9k=
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/head-img2.jpg
@@ -15348,7 +15347,7 @@ wmn/ADMv9q/2p9j+yf6f/wAe3kw+Zv8Asnl/6xdu/dzt2n4q/b1+F3hj4L/tY+OfBvg3TP7H8N6Z
 ACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA
 KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/foot-img1_1.png
@@ -15393,7 +15392,7 @@ iQ6AGQU6E3xUfvWKVZz9V+Quo45VAiONjQyavZlPAAPkEiP+caykjrY0pxLLKHvd127uuJy+Jyqg
 IVfIIwvjtsmHO66ajwYWHqJ5cClUGejEUCfm2D0kyNsC9H/521NWAXVkAU4nAz2dBUC7GWhrFgBt
 ZaD8L5L3FjBIxrZ3RkxvUDZRspG5FgA4VxjLljA2/CvAAJTYHe3I8vnAAAAAAElFTkSuQmCC
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/footnr-new-img1.png
@@ -17407,7 +17406,7 @@ AAAAAADuVpXFXoQ/+w6ANkHP48VydeyysE7oEwAAAAAAAAAAAB4oKoDuxs92SunVM87dWUrpS/yc
 qOjJfYQ+AQAAAAAAAAAA4BkiCPoifnbu+KST+Pd8sVydO+c8Skrp/wF6la6/xCd7iQAAAABJRU5E
 rkJggg==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/hs-bg1.png
@@ -17431,7 +17430,7 @@ bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsITawgAAABaSURBVHjaYnR1je1lYGAoYiAOTGcCEmVA
 vIkIxSA1uSANf4E4EojP4lF8GYhjQGqZoALfgDgAiJ9gUQwS8wLizyAOEy4JXAYx4bIal1NZcHkO
 iDmxBQZAgAEAkwIX4giY+3oAAAAASUVORK5CYII=
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/hs-bg2.png
@@ -17455,7 +17454,7 @@ bWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr9ssagAAABrSURBVHjaYnR1jWXAAjKBmB2IJ6BLsGBR
 7AfEk6Hse0C8CVmSCU2xLhAvBmJmKF4OxEa4NMgA8TYg5kMS4wLijVA5FA0gifXIElgM4oVpgFlt
 woAbgJy6BKSWWVlZvwfISGAgDNSBWBQgwAAbewzS4utXhgAAAABJRU5ErkJggg==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/brand-img2.png
@@ -17513,7 +17512,7 @@ yfDA5QFX74Du+rsHtjmP1S/HGYKhUqaDSjcd6MiJIHg94OntBfflZmAGB0c/0bxh4V71osX10Sue
 q5yQqm/0qVigqSBuOt7hgQe7NC0A5xhOcDSefNrZdDHH3WGZydtvJAhutxpnZi8VMcHOxMV1q5KT
 m9TpGY2Rc+YdY7WafvzxjyMoDd8meP8WYAC0LTbu7K/ZKgAAAABJRU5ErkJggg==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/brand-new-logo.jpg
@@ -18173,7 +18172,7 @@ f2aNH/Y8/ZU8E/DfQtNi0fT/AAzYGM2MWqT6pDaTyyPPPHHczqsssazSyBGdFbZt+Vfugr1SiqMw
 ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
 iigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/head-weibo-img3.jpg
@@ -18211,7 +18210,7 @@ o5BYptxz2+6BxV+igChPpFtMJAm6FZIDA6xYAZSMDjHUdqrv4csJSWkV3lOQZCedpCgr7ZVVXI5x
 35rXooAz10iBYoYg8nlw3BuI1yOCc8dOnzGlOkW322G5TcnlSPL5a42s7LtJPHuTxjkk1fooAKKK
 KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/head-bg2.png
@@ -18235,7 +18234,7 @@ bWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr9DG+IAAABTSURBVHjaYnRxcWlnYGCoYMAN+pmARBUQ
 L8WhACReDFL0H4iTgHgvmoJ9UPH/TFCBX0DsB8QnofzLQBwEFWdgQtL5DYh9gXgHEDsD8UeYBECA
 AQBR+RA3P89QlgAAAABJRU5ErkJggg==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/head-new-img1.png
@@ -18603,7 +18602,7 @@ n9tuu22UW/UGINzZZ58dF5HrQFq//vWvx+4mcinSlJMu3ixZFWQGM/i/isl13mYwgycBZirIDGZQ
 g5kKMoMZ1GCmgsxgBjWYqSAzmEENZirIDGZQg5kKMoMZ1GCmgsxgBjWYqSAzmEENZirIDGZQg5kK
 MoMZVKIo/j8IaXYqTWXg2gAAAABJRU5ErkJggg==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/new-app.png
@@ -18961,7 +18960,7 @@ bWFnZTo6SGVpZ2h0ADBgI0uWAAAAFXRFWHRUaHVtYjo6SW1hZ2U6OldpZHRoADCtTa9LAAAAFnRF
 WHRUaHVtYjo6TWltZXR5cGUAaW1hZ2Uv05xkawAAAA90RVh0VGh1bWI6OlNpemUAMEJClKI+7AAA
 ABJ0RVh0VGh1bWI6OlVSSQBmaWxlOi8vwXeLzwAAAABJRU5ErkJggg==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/head-bg1.png
@@ -18987,7 +18986,7 @@ bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtEFIDAAAADhSURBVHjaYnRxcWllYGCoYiAMihiAik/9
 JP8cFs5PgcFEyMlXQYpfA01gRArbPiB1GYh1gOLFSOIHGYEJBOSMI0B8AohBUR4IxA+AWAGI14OS
 AhBbArE5yGRbaBI1hBryBOoxEG0PDYA3QGwCEGAAPANeHzU2khEAAAAASUVORK5CYII=
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/move-div-head-new-logo.png
@@ -20149,7 +20148,7 @@ NqUH7//08p9SBuy3h53s562pkD0AAAAAAAAAAAAAgvdQTyB/dCuQvyxlh/yP769iBez34frVrYD9
 Zjh/eAjn700PAf35naD+f/v3f/vpt39dvfz/54btP324at7/y8v/XP1y/futAP3tHeqPZsdAfWvk
 dwIAAAAAAAAAAACAy/wXVA6tD2UfGJIAAAAASUVORK5CYII=
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/end-bg.jpg
@@ -20170,7 +20169,7 @@ UNcbJtilvjtyMeskc1YJ6WXUpLDWWGy7bdrbuspXTWlAQgAAAAAAAAAAmyMnIy55crLnmysme+6S
 fIyJb5p5pLq63SSyyXXSSX3V/Wta1rUEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAP/Z
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/brand-bg2.png
@@ -20204,7 +20203,7 @@ Jlw/YdbsPq9Rj7BmzNGh7vOMnhL5OtZ4Rth1933iU9psZUeb2psPAO7GEjfcuQ4EXiFLydhSQjWl
 /wdyGJxKOTrEGEeXX5e+/JB7f6rDDUtzaia7V0jxGvA7gM/C95w6/JCG/8VmWXyB/wQYAHLQIK9L
 JEedAAAAAElFTkSuQmCC
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/brand-bg1.png
@@ -20238,57 +20237,7 @@ Efn7BchVM4LIkwzdSUC21Z0GQDr6gmF9KnrxG52i/Zf52e/yvSoz9hdQSUimWL5jJEJHHbr98wNd
 ZB0B7CpB98h7blutia6QcinI1RT35kbOVYvjMNBHvj9zvsb5m1P/txZpTkIRZ/4IMABmFzc31zeU
 3gAAAABJRU5ErkJggg==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
-Content-Type: image/png
-Content-Transfer-Encoding: base64
-Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/head-drop-bg2.png
-
-iVBORw0KGgoAAAANSUhEUgAAAIsAAACjCAYAAAC65u2kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
-NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
-IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
-ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
-cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNl
-SUQ9InhtcC5paWQ6OTQ2NjdEMzQyOTY5MTFFNkIyOEZDM0VBRTY3QUEwNjgiIHhtcE1NOkRvY3Vt
-ZW50SUQ9InhtcC5kaWQ6OTQ2NjdEMzUyOTY5MTFFNkIyOEZDM0VBRTY3QUEwNjgiPiA8eG1wTU06
-RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5NDY2N0QzMjI5NjkxMUU2QjI4
-RkMzRUFFNjdBQTA2OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5NDY2N0QzMzI5NjkxMUU2
-QjI4RkMzRUFFNjdBQTA2OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w
-bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvnXttwAAAYISURBVHja7NnNSyNnHMDxeSYxKwnxXVoK
-7qUUWmkLglooeNjqzZ6W0kNhqYdST1JX97KH9h9o17X3HlqsHioFF0RoDy1UKohnX3roRfdSfDeY
-upHM03GpksSZ53kmcdeZ8fuFYDYbszrzye95JissEgGfLzlQ/N7VJDloN+93FjXgkGC5mUBEjUgk
-WOIFUCh+VlMsMiJAZBhOrIjwG0IYwrEMgcgIThf5ok+6iCggPyymaHRIooBFXgUeUcNzRETA6FCI
-gJNFBpw0YYQiq0EjqnxXVjPGrxuTH5RLP9Px8fGDs6+ZTOYbnwMqQ4Qk6NSQVUKyklc0vkXIJ4ww
-+HmfP5bL5cbT6fSD/++LbDb7qAJJKbBSNOKawAjNCRcKFCLA842WGJN3pG7CiJBgUf0e4ujoaMzF
-MV76RBfMo4aGhokKGGHcr+imhKx1ORWGUITqIAdc+8M0WS5+j4ODg7HGxsYxr28+PDycaGpqmlBg
-kSHcr+igeN1XghEBoQgNmLAuSUrse3t795ubm++rXmB/f/9xS0vLY82ECdNkkYoNugzwe0jTfYkX
-FOGzDJnACcum9uJn3tnZGW1tbR01ebHd3d3Jtra2ySAHOEQTRYdFBsGiOvl+UFSPh3HPUvZ1e3t7
-1D35XwR5IRfXt+3t7ZMhXIak5qpNh0QLxnTZ8bxtbm7ecQ/c3VQq9b5t26+6j9kWha1njuNsnpyc
-/L66ujrT29v7lwaK9NvH2Ip3ou9tfn6+o1Ao/NzR0TFTX1//kQvlNaCEtlvu+XkjnU5/3tPT89vx
-8fHXIyMjaZ/thHI1SBhOFfv8/uLi4uv9/f1PEonEW5yHyCXq6ureHRgY6N7Y2HiytrZWvIqrBE8s
-g4ODqbm5uV+SySRQIl4+n/8+k8k8dO86FUuP47eBt4OAmpqa+hQo8chdlu6trKy8qbloKcvWfD5S
-dstmsx9zmGNTorOz85MgH3XYCiRl3zw9Pf2KO1Xe4RjHJ/fi5I7Bxx6ek0X1RNHV1XWbwxuv3Kuk
-25b6v27K7tuavcrFzY1L4/iVMjj/lg7LpQnjOI7g2Mbzctpw32I8LYASbyyWpf6AzneyeK5fxWIR
-MDcPkBYLgcMCC9V29cSehamiuGxWYgEFsQxR7fsYsBCThcBCYCGwEFgILERgIbAQWAgsBBYCCxFY
-CCwEFgILgYXAQgQWAguBhcBCYCGwEFiIwEJgIbAQWAgsBBYisBBYCCwEFgILgYUILAQWAguBhcBC
-YCGwEIGFwEJgIbAQWAgsRGAhsBBYCCwEFgILEVgILAQWAguBhcBCBBYCC4GFwEJgIbAQWIjAQmAh
-sBBYCCwEFiKwEFgILAQWAguBhQgsBBYCC4GFwEJgIbAQgYXAQmAhsBBYCCxEYCGwEFgILAQWAgsR
-WAgsBBYCC4U9qcMiOUZU62QBUfwniNSda5YhYs9Cte1PTLF4jqVEIsFSdMPxsGeh0qEgq1mGLl82
-2TZg4otFGgwGmTR8EXl6enrCcY2ZEinzARA9nyxGqpaXl59yeONVsVh8WjkUPBxc3BceX89vduVX
-d7r8mkwm3+Ywx6N8Pv9dJpP50r3rlKApvV8GyTYYQxe3XC73E4c4PoNlfX19xnBlMb4aupA1PDz8
-g+M46xznWEyVH7u7u9e9JojflZFtMlHOb7Ozs8+WlpY+czdG/3C4o5u7nfhzaGjoKwMgZXsYW7Gx
-8QTU19f398LCwofuP7jEYY9cztlEGR8fv3f2xlcNBq9vFh73vTa7nretra0P2tra7qZSqfds2253
-H7vF+Qjd5fG/7lXPVqFQ+ONsj+Kx9JiAkX5YSqGo0Fiax/1Q0gtyoficRGr2Jn5/X/a6yYoXFx5/
-9luaRMmL+0EByfWikRo4lgZKWUnFPygUYCqBlP4DTJXwTBZLAcf4/4RUJ1K3j7F8JokARyQmjKXB
-4vu5izBA5IdHGDyf6XJ9k8UEjGUKRXcS/ZYToXkMHOFekqQBDGlV8Y4XAf5sAgREL2eiBIVj9Hq1
-nGCWm3gsT8bwgpxcUePfU3Smz5WeYGDEG89LO+lAijgKv/4TYAApwRtgzD9inQAAAABJRU5ErkJg
-gg==
-
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/data-bg1.png
@@ -20323,7 +20272,7 @@ kxN1ifyNfrEstirgkByTcvCniwaVWypDOaMvpuy1KkEOkdvxa1Kv2gu58Hk6pJVOGuHlbppdxv8b
 sgZU+7qN++VziBdR9n6IGDsI9tglLJ9DhkigbJFxg7wz+HYJSyvX70/Jv21Xg+8Jx8xnUh9TVZZd
 yRLpjwADALo3l/Yoo51jAAAAAElFTkSuQmCC
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/content_bg_all.jpg
@@ -23959,7 +23908,7 @@ f7vvjD9pRogJEQ2uAw0iAfAuGiAXAZOkdvp3wDL4FCACACACACACACACACACALG9fd74AsgAgAgA
 gAgDRABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
 BABABABABABABABABABABABABABABABABAH/2Q==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/images/law-bg1.png
@@ -24012,10 +23961,10 @@ grhT6ABm29M+QGmSVpFkKrJq+9fy2FusR8HVnvPribgK5HTiqZpQNXHRbBo94HJkcCq5rTWkZVDy
 T3IS+1eIauKq0ArYpqtkk0HbiQ40w+2slqeRsf+pf8Yq9ihwqok7RZZBb+jQzmQCP9P24zxj1+Sk
 2j8CDABnpvDjzBttYgAAAABJRU5ErkJggg==
 
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
-Content-Location: http://www.cffex.com.cn/r/cms/www/default/css/website.min.css?0.663212103138055
+Content-Location: http://www.cffex.com.cn/r/cms/www/default/css/website.min.css?0.7728772396071357
 
 @charset "utf-8";
 
@@ -27040,7 +26989,7 @@ peat; }
  87); display: block; margin-top: 10px; }
 
 .allcontent .jysggnr { text-indent: 0rem; }
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR----
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://www.cffex.com.cn/r/cms/www/default/css/libcss.min.css
@@ -27082,4 +27031,4 @@ ft: 1em; }
 
 .sliding-menu a.back::before { content: "=E3=80=88"; float: left; margin-ri=
 ght: 1em; }
-------MultipartBoundary--GjnoCExnm7gkBiJ3wAlmEmVgjhsKyFk9ti5bgXrspR------
+------MultipartBoundary--SWOqvxOAxm8X30oSLQGCtZdaxaHPK7YXsEtbGMeL3e------
