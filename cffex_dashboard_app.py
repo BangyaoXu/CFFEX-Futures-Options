@@ -4,7 +4,7 @@ CFFEX Futures & Options Dashboard (Streamlit)
 ============================================================================
 
 Install:
-  pip install streamlit pandas numpy scipy plotly beautifulsoup4 lxml
+  pip install streamlit pandas numpy scipy plotly beautifulsoup4 lxml requests
 
 Run:
   streamlit run cffex_app.py
@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import re
 import math
+import json
 import datetime as dt
 from pathlib import Path
 from email import message_from_binary_file
@@ -29,6 +30,7 @@ import streamlit as st
 import plotly.express as px
 from scipy.optimize import brentq
 from bs4 import BeautifulSoup
+import requests
 
 
 # =========================
@@ -47,10 +49,8 @@ OPTIONS_NAME_MAP = {
 FUT_PREFIXES = list(FUTURES_NAME_MAP.keys())
 OPT_PREFIXES = list(OPTIONS_NAME_MAP.keys())
 
-# Options product -> matching futures product (for curve info)
 OPT_TO_FUT = {"IO": "IF", "HO": "IH", "MO": "IM"}
 
-# Optional English display names
 OPTIONS_NAME_EN = {
     "IO": "CSI 300 Index Options",
     "MO": "CSI 1000 Index Options",
@@ -62,18 +62,18 @@ FUTURES_NAME_EN = {
     "IH": "SSE 50 Index Futures",
 }
 
-# Corresponding ETF spot instruments (DISPLAY ONLY)
+# DISPLAY ONLY (your tradable ETF)
 ETF_MAP = {
     "IO": {"name_cn": "沪深300 ETF", "ticker": "510300.SH"},
     "MO": {"name_cn": "中证1000 ETF", "ticker": "159845.SZ"},
     "HO": {"name_cn": "上证50 ETF", "ticker": "510050.SH"},
 }
 
-# ✅ Underlying INDEX spot (USED for parity / spot-vs-futures comparisons)
+# ✅ USED for basis/carry: Yahoo Finance index symbols (as you requested)
 INDEX_MAP = {
-    "IF": {"name_cn": "沪深300指数", "ticker": "000300.SH"},
-    "IH": {"name_cn": "上证50指数", "ticker": "000016.SH"},
-    "IM": {"name_cn": "中证1000指数", "ticker": "000852.SH"},
+    "IF": {"name_cn": "沪深300指数", "ticker": "000300.SS"},
+    "IH": {"name_cn": "上证50指数", "ticker": "000016.SS"},
+    "IM": {"name_cn": "中证1000指数", "ticker": "399852.SZ"},
 }
 
 
@@ -156,9 +156,6 @@ def pick_adjacent_or_nearest_latest(cols: List[str], strike_idx: int) -> Tuple[O
     return call_px_col, put_px_col
 
 
-# =========================
-# Header scoring (fallback path)
-# =========================
 def _score_header_row(row: List[str], want: str) -> int:
     r = [str(x).strip() for x in row]
     s = 0
@@ -186,6 +183,127 @@ def _make_unique_cols(cols: List[str]) -> List[str]:
         name = str(c).strip()
         out.append(f"{name}__{i}" if name else f"__blank__{i}")
     return out
+
+
+def _as_float(x) -> Optional[float]:
+    try:
+        if x is None:
+            return None
+        v = float(x)
+        if np.isnan(v):
+            return None
+        return v
+    except Exception:
+        return None
+
+
+def _pick_front_expiry(df: pd.DataFrame, col: str = "expiry") -> Optional[dt.date]:
+    if df is None or df.empty:
+        return None
+    xs = sorted(df[col].dropna().unique())
+    return xs[0] if xs else None
+
+
+def _sigmoid_to_0_100(x: float) -> int:
+    y = 1.0 / (1.0 + math.exp(-x))
+    return int(round(100.0 * y))
+
+
+def _surface_horizon_from_points(surf_points: Optional[pd.DataFrame]) -> str:
+    if surf_points is None or surf_points.empty:
+        return "3–10 trading days"
+
+    hi = surf_points.dropna(subset=["iv", "expiry"]).sort_values("iv", ascending=False).head(30)
+    if hi.empty:
+        return "3–10 trading days"
+
+    e_mode = hi["expiry"].mode()
+    e_star = e_mode.iloc[0] if len(e_mode) else None
+    if e_star is None:
+        return "3–10 trading days"
+
+    expiries_sorted = sorted(surf_points["expiry"].dropna().unique())
+    if not expiries_sorted:
+        return "3–10 trading days"
+
+    front = expiries_sorted[0]
+    if e_star == front:
+        return "1–5 trading days (event / front-expiry dominated)"
+    if len(expiries_sorted) >= 2 and e_star == expiries_sorted[1]:
+        return "3–10 trading days"
+    return "2–6 weeks (mid/long-expiry dominated)"
+
+
+def _unit_sanity_ok(F: Optional[float], S: Optional[float]) -> bool:
+    """Guard against ETF (~3) vs index (~3000) mismatch."""
+    if F is None or S is None:
+        return False
+    if not np.isfinite(F) or not np.isfinite(S):
+        return False
+    if F <= 0 or S <= 0:
+        return False
+    ratio = F / S
+    return 0.5 <= ratio <= 2.0
+
+
+# =========================
+# ✅ Yahoo Finance Index Spot Fetch
+# =========================
+CN_TZ = dt.timezone(dt.timedelta(hours=8))
+
+@st.cache_data(ttl=60, show_spinner=False)
+def yahoo_last_price(symbol: str) -> Tuple[Optional[float], Optional[dt.datetime], str]:
+    """
+    Fetch last price from Yahoo Finance chart API.
+    Returns (price, timestamp_dt, note).
+    """
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+    params = {"interval": "1m", "range": "1d"}  # intraday last
+    headers = {
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "application/json,text/plain,*/*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Connection": "keep-alive",
+    }
+    try:
+        r = requests.get(url, params=params, headers=headers, timeout=8)
+        if r.status_code != 200:
+            return None, None, f"HTTP {r.status_code}"
+        j = r.json()
+
+        chart = j.get("chart", {})
+        if chart.get("error"):
+            return None, None, f"chart.error: {chart['error']}"
+        res = (chart.get("result") or [])
+        if not res:
+            return None, None, "no result"
+        res0 = res[0]
+
+        meta = res0.get("meta", {})
+        px = meta.get("regularMarketPrice")
+        ts = meta.get("regularMarketTime")
+
+        px = _as_float(px)
+        if px is None:
+            return None, None, "no regularMarketPrice"
+
+        ts_dt = None
+        if ts is not None:
+            try:
+                ts_dt = dt.datetime.fromtimestamp(int(ts), tz=dt.timezone.utc).astimezone(CN_TZ)
+            except Exception:
+                ts_dt = None
+
+        return px, ts_dt, "ok"
+    except Exception as e:
+        return None, None, f"exception: {type(e).__name__}: {e}"
+
+
+def fetch_index_spot_price(index_ticker: str) -> Tuple[Optional[float], Optional[dt.datetime], str]:
+    """
+    Wrapper: returns (spot_px, ts, note).
+    """
+    return yahoo_last_price(index_ticker)
 
 
 # =========================
@@ -216,10 +334,8 @@ def extract_tables_from_mhtml_or_html(path: Path) -> List[pd.DataFrame]:
                 if df0 is None or df0.empty:
                     continue
                 df0 = df0.copy()
-
                 df0.columns = _make_unique_cols([str(c) for c in df0.columns])
 
-                # Keep rows with numbers OR key tokens (so we keep marker rows 看涨 HO2602 看跌)
                 def _row_keep(sr: pd.Series) -> bool:
                     vals = ["" if pd.isna(x) else str(x).strip() for x in sr.values]
                     has_num = any(_num(x) is not None for x in vals)
@@ -260,11 +376,11 @@ def extract_tables_from_mhtml_or_html(path: Path) -> List[pd.DataFrame]:
             data = padded[header_idx + 1 :]
 
             cleaned = []
-            for r in data:
-                has_num = any(_num(x) is not None for x in r)
-                keep_marker = (not has_num) and (any("看涨" in str(x) for x in r) or any("看跌" in str(x) for x in r))
+            for r0 in data:
+                has_num = any(_num(x) is not None for x in r0)
+                keep_marker = (not has_num) and (any("看涨" in str(x) for x in r0) or any("看跌" in str(x) for x in r0))
                 if has_num or keep_marker:
-                    cleaned.append(r)
+                    cleaned.append(r0)
 
             if len(cleaned) < 2:
                 continue
@@ -319,7 +435,6 @@ def pick_best_table(tables: List[pd.DataFrame], pattern: str, want: str) -> Opti
 # =========================
 FUT_COLS = ["product", "product_name", "symbol", "expiry", "last", "volume", "oi"]
 
-
 def parse_futures(df: Optional[pd.DataFrame], prefix: str) -> pd.DataFrame:
     if df is None or df.empty:
         return pd.DataFrame(columns=FUT_COLS)
@@ -340,12 +455,12 @@ def parse_futures(df: Optional[pd.DataFrame], prefix: str) -> pd.DataFrame:
     oi_col = _find_col(cols, "持仓量")
 
     out = []
-    for _, r in df.iterrows():
-        sym = str(r.get(sym_col, "")).strip().upper()
+    for _, r0 in df.iterrows():
+        sym = str(r0.get(sym_col, "")).strip().upper()
         if not re.match(rf"^{prefix}\d{{4}}$", sym):
             continue
         expiry = infer_expiry(sym)
-        last = _num(r.get(last_col))
+        last = _num(r0.get(last_col))
         if expiry is None or last is None:
             continue
         out.append(
@@ -355,8 +470,8 @@ def parse_futures(df: Optional[pd.DataFrame], prefix: str) -> pd.DataFrame:
                 "symbol": sym,
                 "expiry": expiry,
                 "last": float(last),
-                "volume": _num(r.get(vol_col)) if vol_col else None,
-                "oi": _num(r.get(oi_col)) if oi_col else None,
+                "volume": _num(r0.get(vol_col)) if vol_col else None,
+                "oi": _num(r0.get(oi_col)) if oi_col else None,
             }
         )
 
@@ -370,7 +485,6 @@ def parse_futures(df: Optional[pd.DataFrame], prefix: str) -> pd.DataFrame:
 # Options parsing (MULTI-EXPIRY WITHIN ONE TABLE)
 # =========================
 OPT_COLS = ["product", "product_name", "expiry", "cp", "K", "price", "volume", "oi", "symbol"]
-
 
 def _extract_yymm_marker_from_row(values: List[str], prefix: str) -> Optional[str]:
     joined = " ".join(values).upper()
@@ -395,14 +509,13 @@ def parse_options_paired_cn_mode(df: pd.DataFrame, prefix: str) -> pd.DataFrame:
     if call_price_col is None or put_price_col is None:
         return pd.DataFrame(columns=OPT_COLS)
 
-    # Optional: volumes / OI
     call_side_cols = cols[:strike_idx]
     put_side_cols = cols[strike_idx + 1 :]
 
     call_vol_col = next((c for c in call_side_cols[::-1] if "成交量" in c), None)
-    call_oi_col = next((c for c in call_side_cols[::-1] if "持仓量" in c), None)
-    put_vol_col = next((c for c in put_side_cols if "成交量" in c), None)
-    put_oi_col = next((c for c in put_side_cols if "持仓量" in c), None)
+    call_oi_col  = next((c for c in call_side_cols[::-1] if "持仓量" in c), None)
+    put_vol_col  = next((c for c in put_side_cols if "成交量" in c), None)
+    put_oi_col   = next((c for c in put_side_cols if "持仓量" in c), None)
 
     out = []
     current_yymm: Optional[str] = None
@@ -411,14 +524,12 @@ def parse_options_paired_cn_mode(df: pd.DataFrame, prefix: str) -> pd.DataFrame:
     for _, row in df.iterrows():
         vals = ["" if pd.isna(x) else str(x).strip() for x in row.values]
 
-        # marker row (expiry selector)
         yymm = _extract_yymm_marker_from_row(vals, prefix)
         if yymm:
             current_yymm = yymm
             current_expiry = infer_expiry(prefix + yymm)
             continue
 
-        # data rows require current marker
         if current_yymm is None or current_expiry is None:
             continue
 
@@ -427,7 +538,7 @@ def parse_options_paired_cn_mode(df: pd.DataFrame, prefix: str) -> pd.DataFrame:
             continue
 
         call_px = _num(row.get(call_price_col))
-        put_px = _num(row.get(put_price_col))
+        put_px  = _num(row.get(put_price_col))
 
         # poison guard (old bug symptom)
         if call_px is not None and abs(call_px - K) < 1e-12:
@@ -436,34 +547,30 @@ def parse_options_paired_cn_mode(df: pd.DataFrame, prefix: str) -> pd.DataFrame:
             put_px = None
 
         if call_px is not None and call_px > 0:
-            out.append(
-                {
-                    "product": prefix,
-                    "product_name": OPTIONS_NAME_MAP[prefix],
-                    "expiry": current_expiry,
-                    "cp": "C",
-                    "K": float(K),
-                    "price": float(call_px),
-                    "volume": _num(row.get(call_vol_col)) if call_vol_col else None,
-                    "oi": _num(row.get(call_oi_col)) if call_oi_col else None,
-                    "symbol": f"{prefix}{current_yymm}-C-{int(K)}",
-                }
-            )
+            out.append({
+                "product": prefix,
+                "product_name": OPTIONS_NAME_MAP[prefix],
+                "expiry": current_expiry,
+                "cp": "C",
+                "K": float(K),
+                "price": float(call_px),
+                "volume": _num(row.get(call_vol_col)) if call_vol_col else None,
+                "oi": _num(row.get(call_oi_col)) if call_oi_col else None,
+                "symbol": f"{prefix}{current_yymm}-C-{int(K)}",
+            })
 
         if put_px is not None and put_px > 0:
-            out.append(
-                {
-                    "product": prefix,
-                    "product_name": OPTIONS_NAME_MAP[prefix],
-                    "expiry": current_expiry,
-                    "cp": "P",
-                    "K": float(K),
-                    "price": float(put_px),
-                    "volume": _num(row.get(put_vol_col)) if put_vol_col else None,
-                    "oi": _num(row.get(put_oi_col)) if put_oi_col else None,
-                    "symbol": f"{prefix}{current_yymm}-P-{int(K)}",
-                }
-            )
+            out.append({
+                "product": prefix,
+                "product_name": OPTIONS_NAME_MAP[prefix],
+                "expiry": current_expiry,
+                "cp": "P",
+                "K": float(K),
+                "price": float(put_px),
+                "volume": _num(row.get(put_vol_col)) if put_vol_col else None,
+                "oi": _num(row.get(put_oi_col)) if put_oi_col else None,
+                "symbol": f"{prefix}{current_yymm}-P-{int(K)}",
+            })
 
     if not out:
         return pd.DataFrame(columns=OPT_COLS)
@@ -528,22 +635,19 @@ def delta_forward(F: float, K: float, T: float, vol: float, is_call: bool) -> Op
     return norm_cdf(d1) - 1.0
 
 
-# =========================
-# Robust RR/BF via nearest delta
-# =========================
 def rr_bf_25d(ivdf: pd.DataFrame, tol: float = 0.08) -> Optional[Dict[str, float]]:
     d = ivdf.dropna(subset=["iv", "F", "T"]).copy()
     if d.empty:
         return None
 
     d["is_call"] = d["cp"].eq("C")
-    d["delta"] = d.apply(lambda r: delta_forward(r["F"], r["K"], r["T"], r["iv"], bool(r["is_call"])), axis=1)
+    d["delta"] = d.apply(lambda r0: delta_forward(r0["F"], r0["K"], r0["T"], r0["iv"], bool(r0["is_call"])), axis=1)
     d = d.dropna(subset=["delta"])
     if d.empty:
         return None
 
     calls = d[d["cp"] == "C"].copy()
-    puts = d[d["cp"] == "P"].copy()
+    puts  = d[d["cp"] == "P"].copy()
     if calls.empty or puts.empty:
         return None
 
@@ -558,7 +662,6 @@ def rr_bf_25d(ivdf: pd.DataFrame, tol: float = 0.08) -> Optional[Dict[str, float
     iv_c25 = nearest(calls, 0.25)
     iv_p25 = nearest(puts, -0.25)
     iv_atm = nearest(calls, 0.50)
-
     if iv_c25 is None or iv_p25 is None or iv_atm is None:
         return None
 
@@ -567,12 +670,9 @@ def rr_bf_25d(ivdf: pd.DataFrame, tol: float = 0.08) -> Optional[Dict[str, float
     return {"IV_25C": iv_c25, "IV_25P": iv_p25, "IV_ATM": iv_atm, "RR25": rr25, "BF25": bf25}
 
 
-# =========================
-# Robust forward from parity
-# =========================
 def compute_robust_forward_from_parity(s: pd.DataFrame, T: float, r: float) -> Tuple[Optional[float], pd.DataFrame, str]:
     calls = s[s["cp"] == "C"][["K", "price"]].rename(columns={"price": "C"})
-    puts = s[s["cp"] == "P"][["K", "price"]].rename(columns={"price": "P"})
+    puts  = s[s["cp"] == "P"][["K", "price"]].rename(columns={"price": "P"})
     par = pd.merge(calls, puts, on="K", how="inner").dropna()
     if par.empty:
         return None, par, "No C/P pairs"
@@ -603,84 +703,8 @@ def compute_robust_forward_from_parity(s: pd.DataFrame, T: float, r: float) -> T
 
 
 # =========================
-# ✅ INDEX spot fetch (STUB)
-# =========================
-def fetch_index_spot_price(index_ticker: str) -> Optional[float]:
-    """
-    Implement this using your market data source.
-    MUST return the UNDERLYING INDEX LEVEL (e.g., ~3000), not ETF price (~3).
-    """
-    # Example placeholder:
-    # return None
-    return None
-
-
-# =========================
 # ETF Spot Signal Panel (summary at end)
 # =========================
-def _as_float(x) -> Optional[float]:
-    try:
-        if x is None:
-            return None
-        v = float(x)
-        if np.isnan(v):
-            return None
-        return v
-    except Exception:
-        return None
-
-
-def _pick_front_expiry(df: pd.DataFrame, col: str = "expiry") -> Optional[dt.date]:
-    if df is None or df.empty:
-        return None
-    xs = sorted(df[col].dropna().unique())
-    return xs[0] if xs else None
-
-
-def _sigmoid_to_0_100(x: float) -> int:
-    y = 1.0 / (1.0 + math.exp(-x))
-    return int(round(100.0 * y))
-
-
-def _surface_horizon_from_points(surf_points: Optional[pd.DataFrame]) -> str:
-    if surf_points is None or surf_points.empty:
-        return "3–10 trading days"
-
-    hi = surf_points.dropna(subset=["iv", "expiry"]).sort_values("iv", ascending=False).head(30)
-    if hi.empty:
-        return "3–10 trading days"
-
-    e_mode = hi["expiry"].mode()
-    e_star = e_mode.iloc[0] if len(e_mode) else None
-    if e_star is None:
-        return "3–10 trading days"
-
-    expiries_sorted = sorted(surf_points["expiry"].dropna().unique())
-    if not expiries_sorted:
-        return "3–10 trading days"
-
-    front = expiries_sorted[0]
-    if e_star == front:
-        return "1–5 trading days (event / front-expiry dominated)"
-
-    if len(expiries_sorted) >= 2 and e_star == expiries_sorted[1]:
-        return "3–10 trading days"
-
-    return "2–6 weeks (mid/long-expiry dominated)"
-
-
-def _unit_sanity_ok(F: Optional[float], S: Optional[float]) -> bool:
-    if F is None or S is None:
-        return False
-    if not np.isfinite(F) or not np.isfinite(S):
-        return False
-    if F <= 0 or S <= 0:
-        return False
-    ratio = F / S
-    # Index spot and index futures should be same order of magnitude
-    return 0.5 <= ratio <= 2.0
-
-
 def etf_spot_signal_panel(
     *,
     today: dt.date,
@@ -688,19 +712,27 @@ def etf_spot_signal_panel(
     atm_term: Optional[pd.DataFrame],
     skew_term: Optional[pd.DataFrame],
     surf_points: Optional[pd.DataFrame],
-    index_spot_px: Optional[float],  # ✅ index level
+    index_spot_px: Optional[float],
+    index_spot_ts: Optional[dt.datetime],
+    index_spot_source: str,
     r: float,
-    q: float = 0.0,  # ✅ zero dividend by default
+    q: float = 0.0,
 ) -> Dict[str, object]:
     """
     Informational ETF spot tilt from derivatives-implied pricing.
-    ETF is tradable vehicle, but parity uses UNDERLYING INDEX SPOT.
+    (Other signals unchanged; we only add index spot vs futures basis/carry.)
     """
     score = 0.0
     drivers: List[str] = []
     metrics: Dict[str, Optional[float]] = {}
 
     metrics["index_spot_px"] = _as_float(index_spot_px)
+
+    if index_spot_px is None:
+        drivers.append("指数现货缺失：请在侧边栏手动输入（或稍后重试Yahoo）。")
+    else:
+        ts_str = index_spot_ts.strftime("%Y-%m-%d %H:%M:%S") if index_spot_ts else "unknown-time"
+        drivers.append(f"指数现货来源={index_spot_source}：S≈{index_spot_px:.2f}（{ts_str}）")
 
     # ---- Futures curve slope (carry headwind/tailwind proxy)
     curve_slope = None
@@ -724,7 +756,7 @@ def etf_spot_signal_panel(
     else:
         drivers.append("期货曲线斜率不可得（合约不足）。")
 
-    # ---- Spot vs front futures carry (STRICT unit check)
+    # ---- Spot vs front futures basis/carry (REQUIRES index spot)
     front_F = None
     front_T = None
     if futures_sub is not None and not futures_sub.empty:
@@ -734,34 +766,33 @@ def etf_spot_signal_panel(
         front_T = yearfrac(today, front_exp)
 
     metrics["front_fut_px"] = front_F
-    metrics["front_T"] = front_T
+    basis_pct = None
+    carry_excess = None
 
-    if front_F is None or front_T is None or metrics["index_spot_px"] is None:
-        drivers.append("现货指数/近月期货缺失：跳过carry与隐含F对比。")
+    if front_F is None or front_T is None or index_spot_px is None:
+        drivers.append("近月期货/到期T/指数现货缺失：跳过基差与carry计算。")
     elif front_T <= 3 / 365:
         drivers.append("近月期货到期太近：年化carry会失真，已跳过。")
-    elif not _unit_sanity_ok(front_F, metrics["index_spot_px"]):
-        drivers.append("现货/期货单位疑似不匹配（可能误用了ETF价格）：已跳过carry/基差比较。")
+    elif not _unit_sanity_ok(front_F, index_spot_px):
+        drivers.append("现货/期货单位疑似不匹配（比如ETF净值 vs 指数点位）：已跳过基差与carry计算。")
     else:
-        ratio = front_F / metrics["index_spot_px"]
+        ratio = front_F / index_spot_px
         basis_pct = (ratio - 1.0) * 100.0
-        carry_impl = math.log(ratio) / front_T  # cont. rate
-        carry_excess = (carry_impl - (r - q)) * 100.0  # %/yr
-
-        metrics["basis_pct"] = basis_pct
-        metrics["carry_excess_%yr"] = carry_excess
-
+        carry_impl = math.log(ratio) / front_T
+        carry_excess = (carry_impl - (r - q)) * 100.0
         drivers.append(f"近月基差≈{basis_pct:.2f}%；隐含年化carry偏离基准(r-q)≈{carry_excess:.2f}%/yr（q={q:.2%}）")
 
-        # weak directional tilt only
         if carry_excess > 0.50:
             score -= 0.3
-            drivers.append("carry显著高于基准：对现货偏压力（融资成本/风险溢价抬升）。")
+            drivers.append("carry显著高于基准：对现货偏压力。")
         elif carry_excess < -0.50:
             score += 0.3
-            drivers.append("carry显著低于基准：对现货偏支撑（风险溢价走强/现货偏强）。")
+            drivers.append("carry显著低于基准：对现货偏支撑。")
         else:
             drivers.append("Carry接近基准：对方向信息弱。")
+
+    metrics["basis_pct"] = basis_pct
+    metrics["carry_excess_%yr"] = carry_excess
 
     # ---- Front-expiry RR25/BF25
     rr25 = bf25 = None
@@ -774,7 +805,7 @@ def etf_spot_signal_panel(
     metrics["RR25"] = rr25
     metrics["BF25"] = bf25
 
-    rr_th = 0.005  # 0.5 vol point if IV is decimal
+    rr_th = 0.005
     bf_th = 0.005
 
     if rr25 is not None:
@@ -834,7 +865,6 @@ def etf_spot_signal_panel(
         bias = "观望/中性 (NEUTRAL)"
 
     confidence = _sigmoid_to_0_100(1.2 * score)
-
     return {"bias": bias, "horizon": horizon, "confidence": confidence, "score": score, "drivers": drivers, "metrics": metrics}
 
 
@@ -900,11 +930,7 @@ def render_etf_spot_panel_row(
                 "raw_score": round(float(sig.get("score", 0.0)), 3),
             }
         )
-
-        st.markdown(
-            '<div class="etf-panel smallcap">注：基于衍生品隐含信息的提示性信号，不构成投资建议。</div>',
-            unsafe_allow_html=True,
-        )
+        st.markdown('<div class="etf-panel smallcap">注：提示性信号，不构成投资建议。</div>', unsafe_allow_html=True)
 
     st.markdown("---")
 
@@ -969,7 +995,6 @@ with st.sidebar:
     today = st.date_input("Valuation date", dt.date.today())
     r = st.number_input("Risk-free rate r (cont.)", value=0.02, step=0.005, format="%.4f")
 
-    # ✅ q fixed to 0.0 (zero dividend assumption)
     q = 0.0
     st.caption("Dividend yield q is assumed 0.00 (zero dividend).")
 
@@ -979,8 +1004,18 @@ with st.sidebar:
     show_debug = st.checkbox("Show debug", value=False)
     tol = st.slider("RR/BF nearest-delta tolerance", min_value=0.02, max_value=0.20, value=0.08, step=0.01)
 
+    st.divider()
+    st.subheader("Index Spot (Yahoo + manual override)")
+    st.caption("用于基差/carry：必须输入指数点位（~3000），不是ETF净值（~3）。")
+    manual_index_spot: Dict[str, Optional[float]] = {}
+    for fut_pfx, idx in INDEX_MAP.items():
+        key = idx["ticker"]
+        val = st.text_input(f"{idx['name_cn']} {key} spot (optional)", value="")
+        manual_index_spot[key] = _num(val)
+
     if st.button("Reload files"):
         st.rerun()
+
 
 if not data_dir.exists() or not data_dir.is_dir():
     st.error(f"Folder not found: {data_dir}")
@@ -1010,14 +1045,11 @@ fut_debug = []
 
 for p in fut_paths:
     tabs = extract_tables_from_mhtml_or_html(p)
-
     for prefix in FUT_PREFIXES:
         best = pick_best_table(tabs, rf"{prefix}\d{{4}}", want="futures")
         parsed = parse_futures(best, prefix)
-
         if show_debug:
             fut_debug.append((p.name, prefix, None if best is None else list(best.columns), None if best is None else best.head(8)))
-
         if not parsed.empty:
             futures_all.append(parsed)
 
@@ -1040,7 +1072,6 @@ opt_debug: List[Dict[str, object]] = []
 
 for p in opt_paths:
     tabs = extract_tables_from_mhtml_or_html(p)
-
     for prefix in OPT_PREFIXES:
         best = pick_best_table(tabs, rf"{prefix}\d{{4}}", want="options")
         parsed = parse_options(best, prefix)
@@ -1078,7 +1109,6 @@ options_df = pd.concat(options_all, ignore_index=True).drop_duplicates()
 # ---- Sanity: remove price==K poison
 options_df = options_df.dropna(subset=["price"]).copy()
 options_df = options_df[~(np.abs(options_df["price"] - options_df["K"]) < 1e-12)].copy()
-
 if options_df.empty:
     st.error("All options filtered out by sanity checks (price==K). Parsing still wrong.")
     st.stop()
@@ -1136,7 +1166,8 @@ for pfx in sorted(options_df["product"].unique()):
 
         if not ivdf.empty:
             st.plotly_chart(
-                px.line(ivdf, x="K", y="iv", color="cp", markers=True, title=f"{cname} — IV Smile | Expiry {expiry} | F≈{F:.2f}"),
+                px.line(ivdf, x="K", y="iv", color="cp", markers=True,
+                        title=f"{cname} — IV Smile | Expiry {expiry} | F≈{F:.2f}"),
                 use_container_width=True,
             )
 
@@ -1170,11 +1201,13 @@ for pfx in sorted(options_df["product"].unique()):
             dT = max(T2 - T1, 1e-9)
             roll_pct = (F2 / F1 - 1.0) * 100.0
             carry_ann = ((F2 / F1) ** (1.0 / dT) - 1.0) * 100.0
-            rows.append({"roll_from": str(e1), "roll_to": str(e2), "F_from": F1, "F_to": F2, "ΔT_years": dT, "roll_%": roll_pct, "carry_annualized_%": carry_ann})
+            rows.append({"roll_from": str(e1), "roll_to": str(e2), "F_from": F1, "F_to": F2, "ΔT_years": dT,
+                         "roll_%": roll_pct, "carry_annualized_%": carry_ann})
         carry_df = pd.DataFrame(rows)
         if not carry_df.empty:
             st.dataframe(carry_df, use_container_width=True)
-            st.plotly_chart(px.bar(carry_df, x="roll_to", y="carry_annualized_%", title="Carry (annualized) by next expiry"), use_container_width=True)
+            st.plotly_chart(px.bar(carry_df, x="roll_to", y="carry_annualized_%", title="Carry (annualized) by next expiry"),
+                            use_container_width=True)
     else:
         st.info("Forward curve unavailable (missing valid C/P parity pairs).")
 
@@ -1205,20 +1238,36 @@ for pfx in sorted(options_df["product"].unique()):
         piv = surf_df.groupby(["expiry", "m_bucket"])["iv"].median().reset_index()
         piv["m_mid"] = piv["m_bucket"].apply(lambda x: float((x.left + x.right) / 2.0))
         heat = piv.pivot(index="expiry", columns="m_mid", values="iv").sort_index()
-
-        st.plotly_chart(
-            px.imshow(heat, aspect="auto", title="IV Surface (median IV by moneyness bucket)", labels={"x": "Moneyness (K/F)", "y": "Expiry", "color": "IV"}),
-            use_container_width=True,
-        )
+        st.plotly_chart(px.imshow(heat, aspect="auto", title="IV Surface (median IV by moneyness bucket)",
+                                  labels={"x": "Moneyness (K/F)", "y": "Expiry", "color": "IV"}),
+                        use_container_width=True)
     else:
         st.info("IV surface unavailable (not enough solved IV).")
 
-    # ---- Collect signal for summary at end (INDEX spot used)
+    # ---- Collect signal for summary at end
     fut_pfx = OPT_TO_FUT.get(pfx)
     fut_sub = futures_df[futures_df["product"] == fut_pfx].sort_values("expiry").copy() if fut_pfx else None
 
+    # Fetch index spot (Yahoo) + manual override fallback
     idx_info = INDEX_MAP.get(fut_pfx) if fut_pfx else None
-    index_spot_px = fetch_index_spot_price(idx_info["ticker"]) if idx_info else None
+    idx_ticker = idx_info["ticker"] if idx_info else None
+
+    spot_px, spot_ts, note = (None, None, "no-index")
+    spot_source = "none"
+    if idx_ticker:
+        spot_px, spot_ts, note = fetch_index_spot_price(idx_ticker)
+        if spot_px is not None:
+            spot_source = "yahoo"
+        else:
+            # manual override if yahoo failed
+            mpx = manual_index_spot.get(idx_ticker)
+            if mpx is not None:
+                spot_px = float(mpx)
+                spot_ts = dt.datetime.now(CN_TZ)
+                spot_source = "manual"
+
+    if show_debug and idx_ticker:
+        st.caption(f"[debug] index spot {idx_ticker}: {spot_px} | source={spot_source} | note={note}")
 
     sig = etf_spot_signal_panel(
         today=today,
@@ -1226,12 +1275,17 @@ for pfx in sorted(options_df["product"].unique()):
         atm_term=atm_df,
         skew_term=skew_df,
         surf_points=surf_df,
-        index_spot_px=index_spot_px,
+        index_spot_px=spot_px,
+        index_spot_ts=spot_ts,
+        index_spot_source=spot_source,
         r=float(r),
-        q=float(q),
+        q=0.0,
     )
 
     etf_info = ETF_MAP.get(pfx, {"name_cn": f"{cname} 对应ETF", "ticker": "TBD"})
+    idx_name_cn = idx_info["name_cn"] if idx_info else "N/A"
+    idx_tkr = idx_ticker if idx_ticker else "N/A"
+
     signals_summary.append(
         {
             "opt_pfx": pfx,
@@ -1242,9 +1296,9 @@ for pfx in sorted(options_df["product"].unique()):
             "fut_en": FUTURES_NAME_EN.get(fut_pfx, fut_pfx or ""),
             "etf_name_cn": etf_info.get("name_cn", "ETF"),
             "etf_ticker": etf_info.get("ticker", "TBD"),
-            "index_name_cn": (idx_info or {}).get("name_cn", "指数"),
-            "index_ticker": (idx_info or {}).get("ticker", "N/A"),
-            "index_spot_px": index_spot_px,
+            "index_name_cn": idx_name_cn,
+            "index_ticker": idx_tkr,
+            "index_spot_px": spot_px,
             "sig": sig,
         }
     )
@@ -1259,6 +1313,7 @@ if not signals_summary:
     st.info("No ETF spot signals available (missing curves / IV / skew inputs).")
 else:
     signals_summary = sorted(signals_summary, key=lambda x: x["sig"].get("confidence", 0), reverse=True)
+
     for item in signals_summary:
         render_etf_spot_panel_row(
             opt_pfx=item["opt_pfx"],
@@ -1274,6 +1329,7 @@ else:
             index_spot_px=item["index_spot_px"],
             sig=item["sig"],
         )
+
 
 if show_debug:
     st.subheader("Debug")
