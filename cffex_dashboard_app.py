@@ -72,7 +72,7 @@ ETF_MAP = {
 INDEX_MAP = {
     "IF": {"name_cn": "沪深300指数", "ticker": "000300.SS"},
     "IH": {"name_cn": "上证50指数", "ticker": "000016.SS"},
-    "IM": {"name_cn": "中证1000指数", "ticker": "399852.SZ"},
+    "IM": {"name_cn": "中证1000指数", "ticker": "000852.SS"},
 }
 
 
