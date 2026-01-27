@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import re
 import math
-import json
 import datetime as dt
 from pathlib import Path
 from email import message_from_binary_file
@@ -69,7 +68,7 @@ ETF_MAP = {
     "HO": {"name_cn": "上证50 ETF", "ticker": "510050.SH"},
 }
 
-# ✅ USED for basis/carry: Yahoo Finance index symbols (as you requested)
+# ✅ USED for basis/carry + spot lines: Yahoo Finance index symbols
 INDEX_MAP = {
     "IF": {"name_cn": "沪深300指数", "ticker": "000300.SS"},
     "IH": {"name_cn": "上证50指数", "ticker": "000016.SS"},
@@ -280,60 +279,60 @@ def yahoo_last_price(symbol: str) -> Tuple[Optional[float], Optional[dt.datetime
         res0 = res[0]
 
         meta = res0.get("meta", {})
-        px = meta.get("regularMarketPrice")
-        ts = meta.get("regularMarketTime")
+        px0 = meta.get("regularMarketPrice")
+        ts0 = meta.get("regularMarketTime")
 
-        px = _as_float(px)
-        if px is None:
+        px0 = _as_float(px0)
+        if px0 is None:
             return None, None, "no regularMarketPrice"
 
         ts_dt = None
-        if ts is not None:
+        if ts0 is not None:
             try:
-                ts_dt = dt.datetime.fromtimestamp(int(ts), tz=dt.timezone.utc).astimezone(CN_TZ)
+                ts_dt = dt.datetime.fromtimestamp(int(ts0), tz=dt.timezone.utc).astimezone(CN_TZ)
             except Exception:
                 ts_dt = None
 
-        return px, ts_dt, "ok"
+        return px0, ts_dt, "ok"
     except Exception as e:
         return None, None, f"exception: {type(e).__name__}: {e}"
 
 
 def fetch_index_spot_price(index_ticker: str) -> Tuple[Optional[float], Optional[dt.datetime], str]:
-    """
-    Wrapper: returns (spot_px, ts, note).
-    """
+    """Wrapper: returns (spot_px, ts, note)."""
     return yahoo_last_price(index_ticker)
 
+
 # =========================
-# ✅ Spot line helper (Index spot for a futures prefix)
+# ✅ Spot line helper (fixed mapping + returns name)
 # =========================
 @st.cache_data(ttl=60, show_spinner=False)
 def get_index_spot_for_fut_prefix(
     fut_pfx: str,
     manual_index_spot: Dict[str, Optional[float]],
-) -> Tuple[Optional[float], Optional[dt.datetime], str, str, str]:
+) -> Tuple[Optional[float], Optional[dt.datetime], str, str, str, str]:
     """
     Returns:
-      (spot_px, spot_ts, source, note, idx_ticker)
+      (spot_px, spot_ts, source, note, idx_ticker, idx_name_cn)
     source in {"yahoo","manual","none"}.
     """
     idx_info = INDEX_MAP.get(fut_pfx)
     if not idx_info:
-        return None, None, "none", "no-index-map", ""
+        return None, None, "none", "no-index-map", "", ""
 
     idx_ticker = idx_info["ticker"]
+    idx_name_cn = idx_info.get("name_cn", "")
 
     spot_px, spot_ts, note = fetch_index_spot_price(idx_ticker)
     if spot_px is not None:
-        return float(spot_px), spot_ts, "yahoo", note, idx_ticker
+        return float(spot_px), spot_ts, "yahoo", note, idx_ticker, idx_name_cn
 
-    # fallback manual
     mpx = manual_index_spot.get(idx_ticker)
     if mpx is not None:
-        return float(mpx), dt.datetime.now(CN_TZ), "manual", "manual-override", idx_ticker
+        return float(mpx), dt.datetime.now(CN_TZ), "manual", "manual-override", idx_ticker, idx_name_cn
 
-    return None, None, "none", note, idx_ticker
+    return None, None, "none", note, idx_ticker, idx_name_cn
+
 
 # =========================
 # MHTML/HTML table extraction
@@ -747,10 +746,6 @@ def etf_spot_signal_panel(
     r: float,
     q: float = 0.0,
 ) -> Dict[str, object]:
-    """
-    Informational ETF spot tilt from derivatives-implied pricing.
-    (Other signals unchanged; we only add index spot vs futures basis/carry.)
-    """
     score = 0.0
     drivers: List[str] = []
     metrics: Dict[str, Optional[float]] = {}
@@ -763,7 +758,7 @@ def etf_spot_signal_panel(
         ts_str = index_spot_ts.strftime("%Y-%m-%d %H:%M:%S") if index_spot_ts else "unknown-time"
         drivers.append(f"指数现货来源={index_spot_source}：S≈{index_spot_px:.2f}（{ts_str}）")
 
-    # ---- Futures curve slope (carry headwind/tailwind proxy)
+    # ---- Futures curve slope
     curve_slope = None
     if futures_sub is not None and not futures_sub.empty and futures_sub.shape[0] >= 2:
         s = futures_sub.sort_values("expiry")
@@ -785,7 +780,7 @@ def etf_spot_signal_panel(
     else:
         drivers.append("期货曲线斜率不可得（合约不足）。")
 
-    # ---- Spot vs front futures basis/carry (REQUIRES index spot)
+    # ---- Spot vs front futures basis/carry
     front_F = None
     front_T = None
     if futures_sub is not None and not futures_sub.empty:
@@ -861,7 +856,7 @@ def etf_spot_signal_panel(
     else:
         drivers.append("BF25不可得。")
 
-    # ---- Front-expiry ATM IV (risk regime)
+    # ---- Front-expiry ATM IV
     atm_iv = None
     if atm_term is not None and not atm_term.empty:
         front_e = _pick_front_expiry(atm_term, "expiry")
@@ -882,10 +877,8 @@ def etf_spot_signal_panel(
     else:
         drivers.append("ATM IV不可得。")
 
-    # ---- Horizon via IV surface concentration
     horizon = _surface_horizon_from_points(surf_points)
 
-    # ---- Bias mapping
     if score >= 1.5:
         bias = "做多 ETF 现货 (LONG / risk-on)"
     elif score <= -1.5:
@@ -1001,7 +994,6 @@ def split_fut_opt(files: List[Path]) -> Tuple[List[Path], List[Path]]:
 st.set_page_config(page_title="CFFEX Dashboard", layout="wide")
 st.title("CFFEX Futures & Options Dashboard")
 
-# --- Global CSS for ETF signal panel fonts ---
 st.markdown(
     """
     <style>
@@ -1152,28 +1144,29 @@ for pfx in sorted(futures_df["product"].unique()):
     sub = futures_df[futures_df["product"] == pfx].sort_values("expiry").copy()
     st.markdown(f"### {cname} ({pfx})")
 
-    # ✅ fetch index spot for this futures prefix (IF/IH/IM)
-    spot_px, spot_ts, spot_source, spot_note, idx_ticker = get_index_spot_for_fut_prefix(
+    spot_px, spot_ts, spot_source, spot_note, idx_ticker, idx_name_cn = get_index_spot_for_fut_prefix(
         pfx, manual_index_spot
     )
 
     fig = px.line(sub, x="expiry", y="last", markers=True, title=f"{cname} — Futures curve")
 
-    # ✅ add spot hline if units look compatible
     curve_level = _as_float(sub["last"].iloc[0]) if not sub.empty else None
     if spot_px is not None and curve_level is not None and _unit_sanity_ok(curve_level, spot_px):
         ts_str = spot_ts.strftime("%Y-%m-%d %H:%M:%S") if spot_ts else "unknown-time"
         fig.add_hline(
             y=spot_px,
-            annotation_text=f"Index spot ({idx_ticker}) = {spot_px:.2f} [{spot_source}] {ts_str}",
+            line_color="red",
+            line_dash="dash",
+            line_width=2,
+            annotation_text=f"{idx_name_cn} ({idx_ticker}) spot = {spot_px:.2f} [{spot_source}] {ts_str}",
             annotation_position="top left",
+            annotation_font_color="red",
         )
     elif show_debug and idx_ticker:
         st.caption(f"[debug] skip spot line for {pfx}: spot={spot_px} source={spot_source} note={spot_note}")
 
     st.plotly_chart(fig, use_container_width=True)
     st.dataframe(sub, use_container_width=True)
-
 
 
 # =========================
@@ -1190,6 +1183,20 @@ for pfx in sorted(options_df["product"].unique()):
     prod = options_df[options_df["product"] == pfx].copy()
     expiries = sorted(prod["expiry"].unique())
 
+    # ✅ Correct mapping: options product -> futures prefix -> index spot (do NOT leak from futures loop)
+    fut_pfx = OPT_TO_FUT.get(pfx)
+    fut_sub = futures_df[futures_df["product"] == fut_pfx].sort_values("expiry").copy() if fut_pfx else None
+
+    spot_px, spot_ts, spot_source, spot_note, idx_ticker, idx_name_cn = (None, None, "none", "no-map", "", "")
+    if fut_pfx:
+        spot_px, spot_ts, spot_source, spot_note, idx_ticker, idx_name_cn = get_index_spot_for_fut_prefix(
+            fut_pfx, manual_index_spot
+        )
+    idx_info = INDEX_MAP.get(fut_pfx) if fut_pfx else None
+
+    if show_debug and idx_ticker:
+        st.caption(f"[debug] {cname} mapped fut={fut_pfx} index={idx_ticker}: spot={spot_px} source={spot_source} note={spot_note}")
+
     fwd_rows, atm_rows, skew_rows, surf_rows = [], [], [], []
 
     for expiry in expiries:
@@ -1198,7 +1205,7 @@ for pfx in sorted(options_df["product"].unique()):
         if T <= 0:
             continue
 
-        F, par_dbg, note = compute_robust_forward_from_parity(s[["cp", "K", "price"]].copy(), T, r)
+        F, par_dbg, note = compute_robust_forward_from_parity(s[["cp", "K", "price"]].copy(), T, float(r))
         if F is None:
             if show_debug:
                 st.warning(f"{cname} {expiry}: forward not computed ({note})")
@@ -1211,7 +1218,7 @@ for pfx in sorted(options_df["product"].unique()):
         s["T"] = T
         s["F"] = F
         s["is_call"] = s["cp"].eq("C")
-        s["iv"] = s.apply(lambda row: implied_vol(row["price"], F, row["K"], T, r, bool(row["is_call"])), axis=1)
+        s["iv"] = s.apply(lambda row: implied_vol(row["price"], F, row["K"], T, float(r), bool(row["is_call"])), axis=1)
         ivdf = s.dropna(subset=["iv"]).copy()
 
         if not ivdf.empty:
@@ -1240,20 +1247,23 @@ for pfx in sorted(options_df["product"].unique()):
         st.markdown(f"### {cname} — Implied forward curve")
         fig_fwd = px.line(fwd_df, x="expiry", y="F", markers=True, title="Implied Forward vs Expiry")
 
-        # ✅ add same index spot hline (if compatible)
-        ref_F = _as_float(fwd_df["F"].median()) if not fwd_df.empty else None
+        # ✅ RED index spot hline (correct mapping)
+        ref_F = _as_float(fwd_df["F"].median())
         if spot_px is not None and ref_F is not None and _unit_sanity_ok(ref_F, spot_px):
             ts_str = spot_ts.strftime("%Y-%m-%d %H:%M:%S") if spot_ts else "unknown-time"
             fig_fwd.add_hline(
                 y=spot_px,
-                annotation_text=f"Index spot ({idx_ticker}) = {spot_px:.2f} [{spot_source}] {ts_str}",
+                line_color="red",
+                line_dash="dash",
+                line_width=2,
+                annotation_text=f"{idx_name_cn} ({idx_ticker}) spot = {spot_px:.2f} [{spot_source}] {ts_str}",
                 annotation_position="top left",
+                annotation_font_color="red",
             )
         elif show_debug and idx_ticker:
-            st.caption(f"[debug] skip spot line for {cname} forward: spot={spot_px} source={spot_source} note={note}")
-        
-        st.plotly_chart(fig_fwd, use_container_width=True)
+            st.caption(f"[debug] skip spot line for {cname} forward: spot={spot_px} source={spot_source} note={spot_note}")
 
+        st.plotly_chart(fig_fwd, use_container_width=True)
         st.dataframe(fwd_df, use_container_width=True)
 
         st.markdown(f"### {cname} — Forward carry & roll (adjacent expiries)")
@@ -1266,13 +1276,22 @@ for pfx in sorted(options_df["product"].unique()):
             dT = max(T2 - T1, 1e-9)
             roll_pct = (F2 / F1 - 1.0) * 100.0
             carry_ann = ((F2 / F1) ** (1.0 / dT) - 1.0) * 100.0
-            rows.append({"roll_from": str(e1), "roll_to": str(e2), "F_from": F1, "F_to": F2, "ΔT_years": dT,
-                         "roll_%": roll_pct, "carry_annualized_%": carry_ann})
+            rows.append({
+                "roll_from": str(e1),
+                "roll_to": str(e2),
+                "F_from": F1,
+                "F_to": F2,
+                "ΔT_years": dT,
+                "roll_%": roll_pct,
+                "carry_annualized_%": carry_ann
+            })
         carry_df = pd.DataFrame(rows)
         if not carry_df.empty:
             st.dataframe(carry_df, use_container_width=True)
-            st.plotly_chart(px.bar(carry_df, x="roll_to", y="carry_annualized_%", title="Carry (annualized) by next expiry"),
-                            use_container_width=True)
+            st.plotly_chart(
+                px.bar(carry_df, x="roll_to", y="carry_annualized_%", title="Carry (annualized) by next expiry"),
+                use_container_width=True
+            )
     else:
         st.info("Forward curve unavailable (missing valid C/P parity pairs).")
 
@@ -1303,37 +1322,19 @@ for pfx in sorted(options_df["product"].unique()):
         piv = surf_df.groupby(["expiry", "m_bucket"])["iv"].median().reset_index()
         piv["m_mid"] = piv["m_bucket"].apply(lambda x: float((x.left + x.right) / 2.0))
         heat = piv.pivot(index="expiry", columns="m_mid", values="iv").sort_index()
-        st.plotly_chart(px.imshow(heat, aspect="auto", title="IV Surface (median IV by moneyness bucket)",
-                                  labels={"x": "Moneyness (K/F)", "y": "Expiry", "color": "IV"}),
-                        use_container_width=True)
+        st.plotly_chart(
+            px.imshow(
+                heat,
+                aspect="auto",
+                title="IV Surface (median IV by moneyness bucket)",
+                labels={"x": "Moneyness (K/F)", "y": "Expiry", "color": "IV"},
+            ),
+            use_container_width=True,
+        )
     else:
         st.info("IV surface unavailable (not enough solved IV).")
 
-    # ---- Collect signal for summary at end
-    fut_pfx = OPT_TO_FUT.get(pfx)
-    fut_sub = futures_df[futures_df["product"] == fut_pfx].sort_values("expiry").copy() if fut_pfx else None
-
-    # Fetch index spot (Yahoo) + manual override fallback
-    idx_info = INDEX_MAP.get(fut_pfx) if fut_pfx else None
-    idx_ticker = idx_info["ticker"] if idx_info else None
-
-    spot_px, spot_ts, note = (None, None, "no-index")
-    spot_source = "none"
-    if idx_ticker:
-        spot_px, spot_ts, note = fetch_index_spot_price(idx_ticker)
-        if spot_px is not None:
-            spot_source = "yahoo"
-        else:
-            # manual override if yahoo failed
-            mpx = manual_index_spot.get(idx_ticker)
-            if mpx is not None:
-                spot_px = float(mpx)
-                spot_ts = dt.datetime.now(CN_TZ)
-                spot_source = "manual"
-
-    if show_debug and idx_ticker:
-        st.caption(f"[debug] index spot {idx_ticker}: {spot_px} | source={spot_source} | note={note}")
-
+    # ---- Signal for summary (spot already correct)
     sig = etf_spot_signal_panel(
         today=today,
         futures_sub=fut_sub,
@@ -1348,8 +1349,8 @@ for pfx in sorted(options_df["product"].unique()):
     )
 
     etf_info = ETF_MAP.get(pfx, {"name_cn": f"{cname} 对应ETF", "ticker": "TBD"})
-    idx_name_cn = idx_info["name_cn"] if idx_info else "N/A"
-    idx_tkr = idx_ticker if idx_ticker else "N/A"
+    idx_name_cn2 = idx_info["name_cn"] if idx_info else "N/A"
+    idx_tkr2 = idx_ticker if idx_ticker else "N/A"
 
     signals_summary.append(
         {
@@ -1361,8 +1362,8 @@ for pfx in sorted(options_df["product"].unique()):
             "fut_en": FUTURES_NAME_EN.get(fut_pfx, fut_pfx or ""),
             "etf_name_cn": etf_info.get("name_cn", "ETF"),
             "etf_ticker": etf_info.get("ticker", "TBD"),
-            "index_name_cn": idx_name_cn,
-            "index_ticker": idx_tkr,
+            "index_name_cn": idx_name_cn2,
+            "index_ticker": idx_tkr2,
             "index_spot_px": spot_px,
             "sig": sig,
         }
