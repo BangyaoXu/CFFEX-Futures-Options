@@ -1015,9 +1015,14 @@ with st.sidebar:
     st.header("Inputs")
     today = st.date_input("Valuation date", dt.date.today())
     r = st.number_input("Risk-free rate r (cont.)", value=0.02, step=0.005, format="%.4f")
-
-    q = 0.0
-    st.caption("Dividend yield q is assumed 0.00 (zero dividend).")
+    
+    q = st.number_input(
+        "Dividend yield q (cont.)",
+        value=0.04,
+        step=0.005,
+        format="%.4f",
+        help="Continuous dividend yield used in carry baseline (r - q). Example: 0.04 = 4%."
+    )
 
     folder_str = st.text_input("Data folder (default: script folder)", value=str(SCRIPT_DIR))
     data_dir = Path(folder_str).expanduser().resolve()
@@ -1345,7 +1350,7 @@ for pfx in sorted(options_df["product"].unique()):
         index_spot_ts=spot_ts,
         index_spot_source=spot_source,
         r=float(r),
-        q=0.0,
+        q=float(q),
     )
 
     etf_info = ETF_MAP.get(pfx, {"name_cn": f"{cname} 对应ETF", "ticker": "TBD"})
