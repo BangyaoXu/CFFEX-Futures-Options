@@ -1002,11 +1002,14 @@ def render_etf_spot_panel_row(
 
         # --- Existing Key metrics box (unchanged, but safe)
         m = sig.get("metrics", {}) or {}
-        st.markdown("<hr/>", unsafe_allow_html=True)
-        st.markdown('<div class="etf-panel metricbox"><b>Key metrics:</b></div>', unsafe_allow_html=True)
+        
+        spot_metric = m.get("index_spot_px", None)
+        if spot_metric is None and index_spot_px is not None:
+            spot_metric = float(index_spot_px)
+        
         st.write(
             {
-                "index_spot_px": None if m.get("index_spot_px") is None else round(float(m["index_spot_px"]), 4),
+                "index_spot_px": None if spot_metric is None else round(float(spot_metric), 4),
                 "front_fut_px": None if m.get("front_fut_px") is None else round(float(m["front_fut_px"]), 4),
                 "basis_%": None if m.get("basis_pct") is None else round(float(m["basis_pct"]), 4),
                 "carry_excess_%yr": None if m.get("carry_excess_%yr") is None else round(float(m["carry_excess_%yr"]), 4),
