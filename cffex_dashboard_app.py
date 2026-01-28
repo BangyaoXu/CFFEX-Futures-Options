@@ -733,6 +733,16 @@ def compute_robust_forward_from_parity(s: pd.DataFrame, T: float, r: float) -> T
 # =========================
 # ETF Spot Signal Panel (summary at end)
 # =========================
+def _clamp(x: float, lo: float, hi: float) -> float:
+    return max(lo, min(hi, x))
+
+def _tanh_score(x: float, scale: float, weight: float) -> float:
+    # x: signal, scale: typical magnitude, weight: max pts
+    if x is None or not np.isfinite(x):
+        return 0.0
+    scale = max(float(scale), 1e-12)
+    return float(weight * math.tanh(float(x) / scale))
+
 def etf_spot_signal_panel(
     *,
     today: dt.date,
@@ -749,8 +759,14 @@ def etf_spot_signal_panel(
     score = 0.0
     drivers: List[str] = []
     metrics: Dict[str, Optional[float]] = {}
+    contrib_rows: List[Dict[str, object]] = []
 
-    metrics["index_spot_px"] = _as_float(index_spot_px)
+    def add_component(name: str, value: Optional[float], pts: float, msg: str):
+        nonlocal score
+        score += float(pts)
+        sign = "+" if pts >= 0 else ""
+        drivers.append(f"[{sign}{pts:.2f}] {msg}")
+        contrib_rows.append({"component": name, "value": value, "points": float(pts), "explain": msg})
 
     if index_spot_px is None:
         drivers.append("指数现货缺失：请在侧边栏手动输入（或稍后重试Yahoo）。")
@@ -758,29 +774,42 @@ def etf_spot_signal_panel(
         ts_str = index_spot_ts.strftime("%Y-%m-%d %H:%M:%S") if index_spot_ts else "unknown-time"
         drivers.append(f"指数现货来源={index_spot_source}：S≈{index_spot_px:.2f}（{ts_str}）")
 
-    # ---- Futures curve slope
+    # ========= (i) Futures curve slope → annualized excess carry vs (r - q), smooth tanh scoring =========
     curve_slope = None
+    curve_slope_ann = None
+    
     if futures_sub is not None and not futures_sub.empty and futures_sub.shape[0] >= 2:
-        s = futures_sub.sort_values("expiry")
-        f1 = _as_float(s["last"].iloc[0])
-        fN = _as_float(s["last"].iloc[-1])
-        if f1 and fN and f1 > 0:
+        s_fc = futures_sub.sort_values("expiry")
+        f1 = _as_float(s_fc["last"].iloc[0])
+        fN = _as_float(s_fc["last"].iloc[-1])
+        e1 = s_fc["expiry"].iloc[0]
+        eN = s_fc["expiry"].iloc[-1]
+        T1 = yearfrac(today, e1)
+        TN = yearfrac(today, eN)
+    
+        if f1 is not None and fN is not None and f1 > 0 and fN > 0:
             curve_slope = (fN / f1 - 1.0)
+            dT = max(TN - T1, 1e-9)
+            curve_slope_ann = math.log(fN / f1) / dT  # annualized implied carry rate from curve
+    
     metrics["curve_slope"] = curve_slope
-
-    if curve_slope is not None:
-        if curve_slope > 0.002:
-            score -= 0.8
-            drivers.append(f"期货曲线上倾(Contango-ish)：斜率≈{curve_slope*100:.2f}%（风险偏弱/carry拖累）")
-        elif curve_slope < -0.002:
-            score += 0.8
-            drivers.append(f"期货曲线下倾(Backwardation-ish)：斜率≈{curve_slope*100:.2f}%（风险偏强/carry支撑）")
-        else:
-            drivers.append(f"期货曲线接近平坦：斜率≈{curve_slope*100:.2f}%（carry影响较小）")
+    metrics["curve_slope_ann"] = curve_slope_ann
+    
+    if curve_slope_ann is not None:
+        # Excess vs baseline (r - q): higher than baseline => more contango pressure => negative points
+        curve_excess = curve_slope_ann - (r - q)  # decimal/yr
+        pts_curve = _tanh_score(curve_excess, scale=0.03, weight=-0.8)
+        add_component(
+            "curve_excess_carry",
+            curve_excess,
+            pts_curve,
+            f"期货曲线隐含年化carry偏离(r-q)：{curve_excess*100:.2f}%/yr（越高越偏空）"
+        )
     else:
-        drivers.append("期货曲线斜率不可得（合约不足）。")
+        drivers.append("[+0.00] 期货曲线斜率不可得（合约不足）。")
 
-    # ---- Spot vs front futures basis/carry
+
+    # ========= (ii) Front futures vs spot basis/carry excess vs (r - q), smooth tanh scoring =========
     front_F = None
     front_T = None
     if futures_sub is not None and not futures_sub.empty:
@@ -788,94 +817,101 @@ def etf_spot_signal_panel(
         front_F = _as_float(fs["last"].iloc[0])
         front_exp = fs["expiry"].iloc[0]
         front_T = yearfrac(today, front_exp)
-
+    
     metrics["front_fut_px"] = front_F
     basis_pct = None
-    carry_excess = None
-
+    carry_excess = None  # decimal/yr
+    
     if front_F is None or front_T is None or index_spot_px is None:
-        drivers.append("近月期货/到期T/指数现货缺失：跳过基差与carry计算。")
+        drivers.append("[+0.00] 近月期货/到期T/指数现货缺失：跳过基差与carry计算。")
     elif front_T <= 3 / 365:
-        drivers.append("近月期货到期太近：年化carry会失真，已跳过。")
+        drivers.append("[+0.00] 近月期货到期太近：年化carry会失真，已跳过。")
     elif not _unit_sanity_ok(front_F, index_spot_px):
-        drivers.append("现货/期货单位疑似不匹配（比如ETF净值 vs 指数点位）：已跳过基差与carry计算。")
+        drivers.append("[+0.00] 现货/期货单位疑似不匹配（比如ETF净值 vs 指数点位）：已跳过基差与carry计算。")
     else:
         ratio = front_F / index_spot_px
         basis_pct = (ratio - 1.0) * 100.0
-        carry_impl = math.log(ratio) / front_T
-        carry_excess = (carry_impl - (r - q)) * 100.0
-        drivers.append(f"近月基差≈{basis_pct:.2f}%；隐含年化carry偏离基准(r-q)≈{carry_excess:.2f}%/yr（q={q:.2%}）")
+        carry_impl = math.log(ratio) / front_T  # decimal/yr
+        carry_excess = carry_impl - (r - q)     # decimal/yr
+    
+        metrics["basis_pct"] = basis_pct
+        metrics["carry_excess_%yr"] = carry_excess * 100.0
+    
+        # Economic: cheaper futures vs baseline (carry_excess < 0) is supportive => positive points
+        pts_carry = _tanh_score(-carry_excess, scale=0.02, weight=0.3)
+        add_component(
+            "front_carry_excess",
+            carry_excess,
+            pts_carry,
+            f"近月carry偏离(r-q)：{carry_excess*100:.2f}%/yr；基差≈{basis_pct:.2f}%（越低越偏多）"
+        )
 
-        if carry_excess > 0.50:
-            score -= 0.3
-            drivers.append("carry显著高于基准：对现货偏压力。")
-        elif carry_excess < -0.50:
-            score += 0.3
-            drivers.append("carry显著低于基准：对现货偏支撑。")
-        else:
-            drivers.append("Carry接近基准：对方向信息弱。")
-
-    metrics["basis_pct"] = basis_pct
-    metrics["carry_excess_%yr"] = carry_excess
-
-    # ---- Front-expiry RR25/BF25
-    rr25 = bf25 = None
+    # ========= (iii) RR25 (front expiry) smooth scoring =========
+    rr25 = None
     if skew_term is not None and not skew_term.empty:
         front_e = _pick_front_expiry(skew_term, "expiry")
         if front_e is not None:
             row = skew_term[skew_term["expiry"] == front_e].iloc[0]
             rr25 = _as_float(row.get("RR25"))
-            bf25 = _as_float(row.get("BF25"))
+    
     metrics["RR25"] = rr25
-    metrics["BF25"] = bf25
-
-    rr_th = 0.005
-    bf_th = 0.005
-
+    
     if rr25 is not None:
-        if rr25 <= -rr_th:
-            score -= 1.8
-            drivers.append(f"RR25为负（put更贵/偏保护）：RR25≈{rr25*100:.2f} vol pts → 风险偏谨慎")
-        elif rr25 >= rr_th:
-            score += 1.8
-            drivers.append(f"RR25为正（call更贵/偏上行）：RR25≈{rr25*100:.2f} vol pts → 风险偏积极")
-        else:
-            drivers.append(f"RR25接近平：RR25≈{rr25*100:.2f} vol pts")
+        # rr25 in vol units; scale ~1 vol pt (0.01)
+        pts_rr = _tanh_score(rr25, scale=0.01, weight=1.8)
+        add_component(
+            "RR25",
+            rr25,
+            pts_rr,
+            f"RR25≈{rr25*100:.2f} vol pts（正=上行需求；负=保护需求）"
+        )
     else:
-        drivers.append("RR25不可得（±25Δ附近缺少可用IV）。")
+        drivers.append("[+0.00] RR25不可得（±25Δ附近缺少可用IV）。")
 
+    # ========= (iv) BF25 (front expiry) smooth scoring =========
+    bf25 = None
+    if skew_term is not None and not skew_term.empty:
+        front_e = _pick_front_expiry(skew_term, "expiry")
+        if front_e is not None:
+            row = skew_term[skew_term["expiry"] == front_e].iloc[0]
+            bf25 = _as_float(row.get("BF25"))
+    
+    metrics["BF25"] = bf25
+    
     if bf25 is not None:
-        if bf25 >= bf_th:
-            score -= 1.0
-            drivers.append(f"BF25偏高（两翼更贵/尾部风险定价高）：BF25≈{bf25*100:.2f} vol pts")
-        elif bf25 <= -bf_th:
-            score += 0.7
-            drivers.append(f"BF25偏低（两翼更便宜/偏carry）：BF25≈{bf25*100:.2f} vol pts")
-        else:
-            drivers.append(f"BF25中性：BF25≈{bf25*100:.2f} vol pts")
+        # positive BF => wings rich => tail risk priced => negative points
+        pts_bf = _tanh_score(bf25, scale=0.01, weight=-1.0)
+        add_component(
+            "BF25",
+            bf25,
+            pts_bf,
+            f"BF25≈{bf25*100:.2f} vol pts（越高=尾部越贵=偏空）"
+        )
     else:
-        drivers.append("BF25不可得。")
+        drivers.append("[+0.00] BF25不可得。")
 
-    # ---- Front-expiry ATM IV
+    # ========= (v) Front expiry ATM IV regime smooth scoring =========
     atm_iv = None
     if atm_term is not None and not atm_term.empty:
         front_e = _pick_front_expiry(atm_term, "expiry")
         if front_e is not None:
             row = atm_term[atm_term["expiry"] == front_e].iloc[0]
             atm_iv = _as_float(row.get("ATM_IV"))
+    
     metrics["ATM_IV"] = atm_iv
-
+    
     if atm_iv is not None:
-        if atm_iv >= 0.25:
-            score -= 0.8
-            drivers.append(f"近月ATM IV偏高：~{atm_iv*100:.2f}%（波动预期高/偏防守）")
-        elif atm_iv <= 0.15:
-            score += 0.5
-            drivers.append(f"近月ATM IV偏低：~{atm_iv*100:.2f}%（稳定/偏风险）")
-        else:
-            drivers.append(f"近月ATM IV中等：~{atm_iv*100:.2f}%")
+        # Anchor at 20%: lower vol => positive points; higher vol => negative
+        x = 0.20 - atm_iv  # decimal
+        pts_atm = _tanh_score(x, scale=0.05, weight=0.8)
+        add_component(
+            "ATM_IV_regime",
+            atm_iv,
+            pts_atm,
+            f"近月ATM IV≈{atm_iv*100:.2f}%（低波更偏多，高波更偏空）"
+        )
     else:
-        drivers.append("ATM IV不可得。")
+        drivers.append("[+0.00] ATM IV不可得。")
 
     horizon = _surface_horizon_from_points(surf_points)
 
@@ -887,7 +923,15 @@ def etf_spot_signal_panel(
         bias = "观望/中性 (NEUTRAL)"
 
     confidence = _sigmoid_to_0_100(1.2 * score)
-    return {"bias": bias, "horizon": horizon, "confidence": confidence, "score": score, "drivers": drivers, "metrics": metrics}
+    return {
+        "bias": bias,
+        "horizon": horizon,
+        "confidence": confidence,
+        "score": score,
+        "drivers": drivers,
+        "metrics": metrics,
+        "contrib": pd.DataFrame(contrib_rows) if contrib_rows else pd.DataFrame(columns=["component","value","points","explain"]),
+    }
 
 
 def render_etf_spot_panel_row(
@@ -924,31 +968,53 @@ def render_etf_spot_panel_row(
     c1, c2, c3 = st.columns([2.4, 2.0, 1.3])
     with c1:
         st.markdown('<div class="etf-panel kpi-label">方向 / Bias</div>', unsafe_allow_html=True)
-        st.markdown(f'<div class="etf-panel kpi">{sig["bias"]}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="etf-panel kpi">{sig.get("bias","")}</div>', unsafe_allow_html=True)
     with c2:
         st.markdown('<div class="etf-panel kpi-label">持有周期 / Horizon</div>', unsafe_allow_html=True)
-        st.markdown(f'<div class="etf-panel kpi">{sig["horizon"]}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="etf-panel kpi">{sig.get("horizon","")}</div>', unsafe_allow_html=True)
     with c3:
         st.markdown('<div class="etf-panel kpi-label">置信度 / Confidence</div>', unsafe_allow_html=True)
-        st.markdown(f'<div class="etf-panel kpi">{sig["confidence"]}/100</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="etf-panel kpi">{sig.get("confidence",0)}/100</div>', unsafe_allow_html=True)
 
     with st.expander("驱动因素 & 指标 (Drivers & metrics)", expanded=False):
+        # --- Driver text list (now typically includes [±pts] prefix)
         for d in sig.get("drivers", []):
             st.markdown(f'<div class="etf-panel driver">- {d}</div>', unsafe_allow_html=True)
 
-        m = sig.get("metrics", {})
+        # --- NEW: Score breakdown table (per component)
+        contrib = sig.get("contrib")
+        if isinstance(contrib, pd.DataFrame) and not contrib.empty:
+            st.markdown("<hr/>", unsafe_allow_html=True)
+            st.markdown(
+                '<div class="etf-panel metricbox"><b>Score breakdown (per component):</b></div>',
+                unsafe_allow_html=True,
+            )
+
+            df_show = contrib.copy()
+            # Pretty formatting (no hard dependency on exact columns, but expects these)
+            for col in ["value", "points"]:
+                if col in df_show.columns:
+                    df_show[col] = pd.to_numeric(df_show[col], errors="coerce")
+
+            # Order columns if present
+            cols_order = [c for c in ["component", "value", "points", "explain"] if c in df_show.columns]
+            st.dataframe(df_show[cols_order], use_container_width=True)
+
+        # --- Existing Key metrics box (unchanged, but safe)
+        m = sig.get("metrics", {}) or {}
         st.markdown("<hr/>", unsafe_allow_html=True)
         st.markdown('<div class="etf-panel metricbox"><b>Key metrics:</b></div>', unsafe_allow_html=True)
         st.write(
             {
-                "index_spot_px": None if m.get("index_spot_px") is None else round(m["index_spot_px"], 4),
-                "front_fut_px": None if m.get("front_fut_px") is None else round(m["front_fut_px"], 4),
-                "basis_%": None if m.get("basis_pct") is None else round(m["basis_pct"], 4),
-                "carry_excess_%yr": None if m.get("carry_excess_%yr") is None else round(m["carry_excess_%yr"], 4),
-                "curve_slope_%": None if m.get("curve_slope") is None else round(100 * m["curve_slope"], 3),
-                "RR25_vol_pts": None if m.get("RR25") is None else round(100 * m["RR25"], 3),
-                "BF25_vol_pts": None if m.get("BF25") is None else round(100 * m["BF25"], 3),
-                "front_ATM_IV_%": None if m.get("ATM_IV") is None else round(100 * m["ATM_IV"], 2),
+                "index_spot_px": None if m.get("index_spot_px") is None else round(float(m["index_spot_px"]), 4),
+                "front_fut_px": None if m.get("front_fut_px") is None else round(float(m["front_fut_px"]), 4),
+                "basis_%": None if m.get("basis_pct") is None else round(float(m["basis_pct"]), 4),
+                "carry_excess_%yr": None if m.get("carry_excess_%yr") is None else round(float(m["carry_excess_%yr"]), 4),
+                "curve_slope_%": None if m.get("curve_slope") is None else round(100 * float(m["curve_slope"]), 3),
+                "curve_slope_ann_%yr": None if m.get("curve_slope_ann") is None else round(100 * float(m["curve_slope_ann"]), 3),
+                "RR25_vol_pts": None if m.get("RR25") is None else round(100 * float(m["RR25"]), 3),
+                "BF25_vol_pts": None if m.get("BF25") is None else round(100 * float(m["BF25"]), 3),
+                "front_ATM_IV_%": None if m.get("ATM_IV") is None else round(100 * float(m["ATM_IV"]), 2),
                 "raw_score": round(float(sig.get("score", 0.0)), 3),
             }
         )
